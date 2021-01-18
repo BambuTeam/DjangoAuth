@@ -169,7 +169,10 @@ DJOSE = {
     'ACTIVATION_URL': 'ACTIVATE/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS':{
-        
+        'user_create':'accounts.serializers.UserCreateSerializers',
+        'user':'accounts.serializers.UserCreateSerializers',
+        'user_delete':'accounts.serializers.UserDeleteSerializers',
+
     }
 }
 
