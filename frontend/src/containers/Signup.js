@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Signup = (props) => {
-    <div>
+  return (  <div>
         sign up
-    </div>
+    </div>);
 };
 
 

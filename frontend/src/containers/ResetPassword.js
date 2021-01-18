@@ -1,9 +1,9 @@
 import React from 'react';
 
 const ResetPassword = (props) => {
-    <div>
+    return(<div>
         Reset Password
-    </div>
+    </div>);
 };
 
 
