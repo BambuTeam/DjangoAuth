@@ -2,7 +2,9 @@ import {
     LOGIN_FAIL,
     LOGIN_SUCCES,
     USER_LOADED_SUCCESS,
-    USER_LOADED_FAIL
+    USER_LOADED_FAIL,
+    AUTHENTICATED_SUCCESS,
+    AUTHENTICATED_FAIL
 } from '../actions/types';
 
 const initialState = {
@@ -47,6 +49,15 @@ export default function (state = initialState, action){
                 isAuthenticated: false,
                 user: null
             }
+        case AUTHENTICATED_SUCCESS:
+            return{
+                ...state
+            }
+        case AUTHENTICATED_FAIL:
+            return {
+                ...state
+            }
+        
         default:
             return state
     }

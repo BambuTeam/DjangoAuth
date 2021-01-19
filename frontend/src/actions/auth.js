@@ -4,15 +4,46 @@ import {
     LOGIN_FAIL,
     LOGIN_SUCCES,
     USER_LOADED_SUCCESS,
-    USER_LOADED_FAIL
+    USER_LOADED_FAIL,
+    AUTHENTICATED_FAIL,
+    AUTHENTICATED_SUCCESS,
+    LOGOUT
 } from './types';
+
+
+export const checkAuthenticated = () => async dispatch =>{
+    if(localStorage.getItem('access')){
+        const config = {
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json',
+            }
+        };
+
+        const body = JSON.stringify({ token: localStorage.getItem('access')})
+
+
+        try{
+
+        }catch(err){
+            dispatch({
+                type: AUTHENTICATED_FAIL
+            })
+        }
+    }else {
+        dispatch({
+            type: AUTHENTICATED_FAIL
+        })
+    }
+}
+
 
 export const load_user = ()=> async dispatch =>{
     if(localStorage.getItem('access')){
         const config = {
             headers:{
                 'Content-Type':'application/json',
-                'aUTHORIZATION':`JWT ${localStorage.getItem('access')}`,
+                'Authorization':`JWT ${localStorage.getItem('access')}`,
                 'Accept':'application/json',
             }
         };
@@ -45,7 +76,7 @@ export const login = (email, password)=> async dispatch =>{
     const body = JSON.stringify({email, password});
 
     try{
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/jwt/create/`, body, config);
+        const res = await axios.post(`/auth/jwt/create/`, body, config);
         dispatch({
             type: LOGIN_SUCCES,
             payload: res.data
@@ -58,4 +89,10 @@ export const login = (email, password)=> async dispatch =>{
         })
     }
 };
+
+export const logout=() => dispatch=>{
+    dispatch({
+        type:LOGOUT
+    })
+}
 

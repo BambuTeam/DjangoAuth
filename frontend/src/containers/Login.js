@@ -8,7 +8,7 @@ import { login } from '../actions/auth';
 
 
 
-const Login = ({ login   }) => {
+const Login = ({ login }) => {
     const [formData, setFormData] = useState({
         email: '',
         password:''
@@ -20,8 +20,7 @@ const Login = ({ login   }) => {
 
     const onSubmit = e=>{
         e.preventDefault();
-        //login(emil, password)
-
+        login(email, password)
     }
 
 
