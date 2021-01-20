@@ -29,7 +29,7 @@ const App = ()=>(
                     <Route exact path ='/signup' component={Signup}/>
                     <Route exact path ='/activate/:uid/:token' component={Activate}/>
                     <Route exact path ='/Password/reset/configm/:uid/:token' component={ResetPasswordConfirm}/>
-                    <Route exact path = '/step' component  = {VersionOne} />
+                    
                 </Switch>
             </Layout>     
         </Router>
