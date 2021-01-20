@@ -2,7 +2,10 @@ import {
     LOGIN_FAIL,
     LOGIN_SUCCES,
     USER_LOADED_SUCCESS,
-    USER_LOADED_FAIL
+    USER_LOADED_FAIL,
+    AUTHENTICATED_SUCCESS,
+    AUTHENTICATED_FAIL,
+    LOGOUT
 } from '../actions/types';
 
 const initialState = {
@@ -13,6 +16,7 @@ const initialState = {
     
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function (state = initialState, action){
     const {type, payload }=action;
 
@@ -47,6 +51,27 @@ export default function (state = initialState, action){
                 isAuthenticated: false,
                 user: null
             }
+        case LOGIN_FAIL:
+            localStorage.removeItem('access');
+            localStorage.removeItem('refresh');
+            return {
+                ...state,
+                access: null, 
+                refresh: null,
+                isAuthenticated: false,
+                user: null
+            }
+        case AUTHENTICATED_SUCCESS:
+            return{
+                ...state,
+                isAuthenticated: true
+            }
+        case AUTHENTICATED_FAIL:
+            return {
+                ...state,
+                isAuthenticated: false
+            }
+        
         default:
             return state
     }
