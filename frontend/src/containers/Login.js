@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect }from 'react-router-dom';
+import { Redirect }from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/auth';
 
@@ -36,7 +36,7 @@ const Login = ({ login, isAuthenticated }) => {
         <section className="fxt-template-animation fxt-template-layout8 login-bk" data-bg-image="img/figure/bg8-l.jpg">
                 <div className="fxt-content ">
                     <div className="fxt-header">
-                        <a  className="fxt-logo"><img src={ logo } alt="Logo" /></a>
+                        <a  className="fxt-logo" href = "#"><img src={ logo } alt="Logo" /></a>
                     </div>
                     <div className="lottie">
             
