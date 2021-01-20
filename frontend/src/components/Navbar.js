@@ -15,17 +15,22 @@ const Navbar = ({ logout, isAuthenticated}) => {
             </li>
             <li>
                 <Link className = 'nav-link' to='/login'>
-                    Login 
-                </Link>
-                
-
+                    Signup 
+                </Link>    
             </li>
         </Fragment>
 
     };
-    const authLinks =()=>{
+    const authLinks =()=>(
+            <li className= 'nav-item'd>
+                <a className = 'nav-link' href='#!' onClick={ logout }>
+                    Logout 
+                </a>
+            </li>
 
-    };
+    );
+
+
         return(
             <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">

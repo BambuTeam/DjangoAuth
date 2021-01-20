@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/bootstrap-datepicker.css';
+import './assets/css/fontawesome-all.css';
+import './assets/css/animate.min.css';
+
+//main css
+import './assets/scss/style.scss';
+
+import 'bootstrap';
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
