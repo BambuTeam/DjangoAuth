@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'accounts',
-    
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'auth_system.urls'
@@ -176,4 +178,11 @@ DJOSER = {
 } 
 AUTH_USER_MODEL = 'accounts.UserAccount'
 
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+    'http://localhost:8080',
+    'http://localhost',
+)
 
