@@ -25,7 +25,7 @@ const Login = ({ login, isAuthenticated }) => {
         login(email, password)
     }
     if (isAuthenticated){
-        return <Redirect to = '/'/>
+        return <Redirect to = '/step'/>
     }
 
     //is the user autehticaded
