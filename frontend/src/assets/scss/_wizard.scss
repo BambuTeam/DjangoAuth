@@ -1,3 +1,14 @@
+$bage-bg: #f9f9f9;
+$body-color: #2f3146;
+$base-color: #151f46;
+$color-primary: #000;
+$color-secondary: #fff;
+$color-white: #fff;
+$color-blackis: #1a1a1a;
+$btn-circle-decor-dimensions: 50px;
+
+
+
 /* ==========================================================================
    multistep css
    ========================================================================== */
@@ -96,11 +107,10 @@
 .multisteps-form__panel {
 	@include position-absolute($top: 0, $left: 0);
 	width: 100%;
-	opacity: 0;
-	visibility: hidden;
+	
 	transition: 0.3s ease;
-	overflow: hidden;
-	height: 0;
+	
+	
 
     //active panels
     &.js-active {
@@ -805,5 +815,5 @@
 
 
 body{
-	background-color: #000000;
+	background-color: #fefefe;
 }
