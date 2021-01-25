@@ -10,6 +10,9 @@ import ResetPassword from './containers/ResetPassword';
 import ResetPasswordConfirm from './containers/ResetPassword';
 
 
+
+
+
 import { Provider } from 'react-redux'
 import store from './store';
 import VersionOne from './components/version-one';
