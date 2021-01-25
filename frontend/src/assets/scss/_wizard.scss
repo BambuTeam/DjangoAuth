@@ -29,9 +29,27 @@ $btn-circle-decor-dimensions: 50px;
 }
 
 .nameshape{
-	background-color: #dedede52;
+	background: linear-gradient(-45deg, #FFCE15, #fefefe, #9eb0ff36, #3F3F3F);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	-webkit-box-shadow: -6px 5px 9px 6px rgba(0,0,0,0.14); 
+	box-shadow: -6px 5px 9px 6px rgba(0,0,0,0.14);
+	padding: 20px;
+	border-radius: 10px;
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
 	
-	padding: 10px;
 }
 
 
@@ -189,10 +207,12 @@ $btn-circle-decor-dimensions: 50px;
 		text-transform: uppercase;
 
 		h1{
-			color: #151f46;
-			font-family: goyacursive, serif;
+			
+			color: #242323;
+			letter-spacing: 3px ;
+			font-family: goyabold, serif;
 			font-size: 20px;
-			text-decoration: underline;
+			
 			
 			
 		}	

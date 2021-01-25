@@ -12,7 +12,7 @@ function Step1(props) {
                         <div className="form-content pera-content">
                             <div className="step-inner-content">
                                 <div className="nameshape">
-                                    <span className="step-no">Welcome<h1> Nombre de Usuario</h1></span>
+                                    <span className="step-no">[ Welcome ]<h1> Nombre de Usuario</h1></span>
                                 </div>
                                 <h2>Please select the type of your order.</h2>
                                 <p>
