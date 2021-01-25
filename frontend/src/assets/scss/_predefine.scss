@@ -106,10 +106,13 @@ h6 {
 }
 
 // default pre style
-.pb-100 {
+/* .pb-100 {
     padding-bottom: 100px;
-}
+} */
 
+.pb-10 {
+    padding-bottom: 10px;
+}
 .pb-200 {
     padding-bottom: 200px;
 }
@@ -138,7 +141,7 @@ h6 {
 }
 
 .steps-area-fixed + .multisteps-form__form {
-    margin-left: 500px;
+    margin-left: 600px;
 }
 
 .boxed-version {

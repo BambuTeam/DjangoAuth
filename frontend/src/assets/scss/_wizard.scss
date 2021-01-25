@@ -817,3 +817,71 @@ $btn-circle-decor-dimensions: 50px;
 body{
 	background-color: #fefefe;
 }
+
+.opti-list {
+	button {
+		position: relative;
+		display: inline-block;
+		margin-right: 25px;
+		font-size: 19px;
+		color: #5f5f63;
+		padding: 20px 20px 20px 60px;
+		width: 33%;
+		font-weight: 600;
+		cursor: pointer;
+		border: 2px solid #ededed;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		input {
+			opacity: 0;
+			position: absolute;
+			left: 15px;
+			top: 20px;
+			width: 28px;
+			height: 28px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			height: 28px;
+			left: 15px;
+			top: 20px;
+			width: 28px;
+			border: 2px solid #ededed;
+		}
+
+		&:before {
+			content: '\f00c';
+			top: 28px;
+			left: 24px;
+			font-size: 12px;
+			line-height: 1;
+			font-weight: 900;
+			display: none;
+			color: #fff;
+			z-index: 1;
+			font-family: 'Font Awesome 5 Free';
+			position: absolute;
+		}
+
+		&.active {
+			border: 2px solid $base-color;
+			box-shadow: 0 0 15px 5px #6b58d317;
+
+			&:after {
+				border: 2px solid $base-color;
+				background-color: $base-color;
+			}
+
+			&:before {
+				display: block;
+			}
+		}
+	}
+}
+
+

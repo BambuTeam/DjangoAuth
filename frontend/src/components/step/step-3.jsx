@@ -28,15 +28,18 @@ function Step3(props) {
                         <p>Optimization and Accessibility</p>
                         <div className="opti-list">
                             <ul className="d-md-flex">
-                                <li className="bg-white active"><input type="checkbox" name="code_opti1" value="Pick Up"
-                                        defaultChecked />Pick Up</li>
-                                <li className="bg-white"><input type="checkbox" name="code_opti2"
-                                        value="Deliver to GOYA" />Deliver to GOYA</li>
-                                <li className="bg-white"><input type="checkbox" name="code_opti3"
-                                        value="Drop Off" />Drop Off</li>
-                                <li className="bg-white"><input type="checkbox" name="code_opti3" value="FedEx" />FedEx
-                                </li>
+                                <button className="bg-white active"><input type="checkbox" name="code_opti1" value="Pick Up"
+                                        defaultChecked />Pick Up</button>
+                                <button className="bg-white"><input type="checkbox" name="code_opti2"
+                                        value="Deliver to GOYA" />Deliver to GOYA</button>
+                                <button className="bg-white"><input type="checkbox" name="code_opti3"
+                                        value="Drop Off" />Drop Off</button>
+                                <button className="bg-white"><input type="checkbox" name="code_opti3" value="FedEx" />FedEx
+                                </button>
+
+                                
                             </ul>
+                            
                         </div>
                     </div>
 
