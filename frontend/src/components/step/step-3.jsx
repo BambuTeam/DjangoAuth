@@ -1,9 +1,4 @@
 import React from "react";
-import { StepComponentProps } from "react-step-builder";
-
-
-
-
 
 function Step3(props) {
     return (
@@ -25,7 +20,7 @@ function Step3(props) {
                                 <h2>Pick up information</h2>
                     <p>Please select the type of handle of your basket</p>
                     <div className="budget-area">
-                        <p>Optimization and Accessibility</p>
+                        
                         <div className="opti-list">
                             <ul className="d-md-flex">
                                 <button className="bg-white active"><input type="checkbox" name="code_opti1" value="Pick Up"

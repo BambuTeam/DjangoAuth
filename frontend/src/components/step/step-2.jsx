@@ -1,10 +1,6 @@
 import React from "react";
 
 
-
-
-
-
 function Step2(props) {
     return (
         <div className="multisteps-form__panel" data-animation="slideHorz">
@@ -54,23 +50,16 @@ function Step2(props) {
                             </div>
                         </div>
                     </div>
-                    {/*
-                    <!-- /.inner -->*/}
+                    
                     <div className="actions">
                         <ul>
-                            
                             <li><button className="js-btn-prev" title="BACK" onClick={props.prev}>BACK <i className="fa fa-arrow-left"></i></button></li>
-                            <li><button className="js-btn-prev" title="NEXT" onClick={props.next}>NEXT <i className="fa fa-arrow-right"></i></button></li>
-
-                            
-                           
-
-                            
-                            
+                            <li><button className="js-btn-prev" title="NEXT" onClick={props.next}>NEXT <i className="fa fa-arrow-right"></i></button></li>                      
                         </ul>
                     </div>
-                </div>
-            </div>
+                    </div>
+        </div>
+        
     );
 }
 
