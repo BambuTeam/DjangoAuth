@@ -11,8 +11,17 @@ function Step3(props) {
 
 
     const handleClicPickUp = ()=>{
-        var op  =   document.getElementById('miBoton')
-        op.style.display = "none";
+        var button  =   document.getElementById('btn_PickUp')
+        var otros_botones = document.getElementsByClassName('btn_white')
+        otros_botones.removeClass('');
+        button.addClass('button');
+
+
+        var secction = document.getElementById('sec_pickup');
+        var oters_secction = document.getElementsByClassName('sec_pickup');
+        oters_secction.style.display('none');
+        secction.style.display(block);
+        
     }
     const handleClicDelibery = ()=>{
         var op  =   document.getElementById('miBoton')
@@ -52,7 +61,7 @@ function Step3(props) {
                         <div className="opti-list">
                             <ul className="d-md-flex">
 
-                            <button className="bg-white" id="btn_PickUp" onClick={handleClicPickUp}> no un mensaje</button>
+                            <button className="bg-white" id="btn_PickUp" onClick={handleClicPickUp}>PickUp</button>
                             <button className="bg-white" id="btn_Delivery" onClick={handleClicDelibery}> no un mensaje</button>
                             <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> no un mensaje</button>
                             <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> no un mensaje</button>
