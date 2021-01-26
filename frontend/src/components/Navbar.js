@@ -15,21 +15,26 @@ const Navbar = ({ logout, isAuthenticated}) => {
             </li>
             <li>
                 <Link className = 'nav-link' to='/login'>
-                    Login 
-                </Link>
-                
-
+                    Signup 
+                </Link>    
             </li>
         </Fragment>
 
     };
-    const authLinks =()=>{
+    const authLinks =()=>(
+            <li className= 'nav-item'd>
+                <a className = 'nav-link' href='#!' onClick={ logout }>
+                    Logout 
+                </a>
+            </li>
 
-    };
+    );
+
+
         return(
             <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand">Sistem</Link>
+            <Link className="navbar-brand">Batres Creative Services</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

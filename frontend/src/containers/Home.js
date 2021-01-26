@@ -1,7 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Home = (props) => {
+const Home = ({ isAuthenticated }) => {
+
+    if (!isAuthenticated){
+        return <Redirect to = '/'/>
+    }
+
+
     return(
     <div className='container'>
         <div className='jumbotron'>
@@ -16,4 +23,8 @@ const Home = (props) => {
 };
 
 
-export default Home;
+const mapStateToProps = state =>({
+    isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps)(Home);

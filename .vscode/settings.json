@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 17,
+    "debug.console.fontSize": 18,
+    "terminal.integrated.fontSize": 16,
+    "markdown.preview.fontSize": 17,
+    "editor.suggestFontSize": 17,
+    "editor.codeLensFontSize": 8,
+    "editor.minimap.scale": 2
+}
