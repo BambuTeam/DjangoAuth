@@ -7,24 +7,26 @@ import { StepComponentProps } from "react-step-builder";
 
 function Step3(props) {
 
-    const noshowMessage = ()=>{
+    
+
+
+    const handleClicPickUp = ()=>{
         var op  =   document.getElementById('miBoton')
         op.style.display = "none";
-
     }
-    const showMessage = ()=>{
+    const handleClicDelibery = ()=>{
         var op  =   document.getElementById('miBoton')
-        op.style.display = "block";
-
+        op.style.display = "none";
+    }
+    const handleClicDropOf = ()=>{
+        var op  =   document.getElementById('miBoton')
+        op.style.display = "none";
+    }
+    const handleClicFedex = ()=>{
+        var op  =   document.getElementById('miBoton')
+        op.style.display = "none";
     }
 
-
-    const handleClic1 = ()=>{
-        setTimeout(noshowMessage, 1000);
-    }
-    const handleClic2 = ()=>{
-        setTimeout(showMessage, 1000);
-    }
 
 
     return (
@@ -50,27 +52,11 @@ function Step3(props) {
                         <div className="opti-list">
                             <ul className="d-md-flex">
 
-                            <button onClick={handleClic1}> no un mensaje</button>
-                                <button onClick={handleClic2}> Show un mensaje</button>
-
-
-
-                                <button className="bg-white">
-                                    <input
-                                       type="radio"
-                                       name="code_opti1"
-                                       value="Pick Up"
-                                       defaultChecked
-                                    />
-                                        Pick Up</button>
-                                <button className="bg-white"><input type="checkbox" name="code_opti2"
-                                        value="Deliver to GOYA" />Deliver to GOYA</button>
-                                <button className="bg-white"><input type="checkbox" name="code_opti3"
-                                        value="Drop Off" />Drop Off</button>
-                                <button className="bg-white"><input type="checkbox" name="code_opti3" value="FedEx" />FedEx
-                                </button>
-
-
+                            <button className="bg-white" id="btn_PickUp" onClick={handleClicPickUp}> no un mensaje</button>
+                            <button className="bg-white" id="btn_Delivery" onClick={handleClicDelibery}> no un mensaje</button>
+                            <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> no un mensaje</button>
+                            <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> no un mensaje</button>
+                        
                             </ul>
 
                         </div>
