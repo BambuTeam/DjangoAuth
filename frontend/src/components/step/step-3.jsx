@@ -10,6 +10,9 @@ function Step3(props) {
                                 <span className="step-no bottom-line">Step 3</span>
                                 <div className="step-progress float-right">
                                     <span>3 of 3 completed</span>
+                                    <div className="svgmail" style={{width: '100%' }}>
+                                    <img  src="https://www.flaticon.com/svg/vstatic/svg/2089/2089181.svg?token=exp=1611687191~hmac=6b95fd08af6d2a83915108088b2d7c6c" />
+                                    </div>
                                     <div className="step-progress-bar">
                                         <div className="progress">
                                             <div className="progress-bar" style={{width: '80%' }}></div>
@@ -49,15 +52,15 @@ function Step3(props) {
                                             <p><i className="fas fa-shopping-basket"></i> Quantity Basket</p>
                                         </div>
                                         <div className="row">
-                                            <div className="col-4">
+                                            <div className="col-lg-4 col-lg-4 col-sm-12">
                                                 <input type="number" id="give_away" name="give_away" min="0" max="100"
                                                     placeholder="Give Away (S)" />
                                             </div>
-                                            <div className="col-4">
+                                            <div className="col-lg-4 col-lg-4 col-sm-12">
                                                 <input type="number" id="vip" name="vip" min="0" max="100"
                                                     placeholder="V.I.P. (M)" />
                                             </div>
-                                            <div className="col-4">
+                                            <div className="col-lg-4 col-lg-4 col-sm-12">
                                                 <input type="number" id="show_baskets" name="show_baskets" min="0" max="100"
                                                     placeholder="Show Basket (L)" />                                            </div>
                                         </div>

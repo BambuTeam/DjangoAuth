@@ -27,15 +27,15 @@ function Step2(props) {
                                             <p><i className="fas fa-shopping-basket"></i> Quantity Basket</p>
                                         </div>
                                         <div className="row">
-                                            <div className="col-4">
+                                            <div className="col-lg-4 col-lg-4 col-sm-12">
                                                 <input type="number" id="give_away" name="give_away" min="0" max="100"
                                                     placeholder="Give Away (S)" />
                                             </div>
-                                            <div className="col-4">
+                                            <div className="col-lg-4 col-lg-4 col-sm-12">
                                                 <input type="number" id="vip" name="vip" min="0" max="100"
                                                     placeholder="V.I.P. (M)" />
                                             </div>
-                                            <div className="col-4">
+                                            <div className="col-lg-4 col-lg-4 col-sm-12">
                                                 <input type="number" id="show_baskets" name="show_baskets" min="0" max="100"
                                                     placeholder="Show Basket (L)" />                                            </div>
                                         </div>
@@ -54,7 +54,7 @@ function Step2(props) {
                     <div className="actions">
                         <ul>
                             <li><button className="js-btn-prev" title="BACK" onClick={props.prev}>BACK <i className="fa fa-arrow-left"></i></button></li>
-                            <li><button className="js-btn-prev" title="NEXT" onClick={props.next}>NEXT <i className="fa fa-arrow-right"></i></button></li>                      
+                            <li><button className="js-btn-next" title="NEXT" onClick={props.next}>NEXT <i className="fa fa-arrow-right"></i></button></li>                      
                         </ul>
                     </div>
                     </div>
