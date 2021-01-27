@@ -11,8 +11,17 @@ function Step3(props) {
 
 
     const handleClicPickUp = ()=>{
-        var op  =   document.getElementById('miBoton')
-        op.style.display = "none";
+        var button  =   document.getElementById('btn_PickUp')
+        var otros_botones = document.getElementsByClassName('btn_white')
+        otros_botones.removeClass('');
+        button.addClass('button');
+
+
+        var secction = document.getElementById('sec_pickup');
+        var oters_secction = document.getElementsByClassName('sec_pickup');
+        oters_secction.style.display('none');
+        secction.style.display(block);
+        
     }
     const handleClicDelibery = ()=>{
         var op  =   document.getElementById('miBoton')
@@ -52,19 +61,19 @@ function Step3(props) {
                         <div className="opti-list">
                             <ul className="d-md-flex">
 
-                            <button className="bg-white" id="btn_PickUp" onClick={handleClicPickUp}> no un mensaje</button>
-                            <button className="bg-white" id="btn_Delivery" onClick={handleClicDelibery}> no un mensaje</button>
-                            <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> no un mensaje</button>
-                            <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> no un mensaje</button>
-                        
+                                <button className="bg-white" id="btn_PickUp" onClick={handleClicPickUp}>PickUp</button>
+                                <button className="bg-white" id="btn_Delivery" onClick={handleClicDelibery}> no un mensaje</button>
+                                <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> no un mensaje</button>
+                                <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> no un mensaje</button>
+                            
                             </ul>
 
                         </div>
                     </div>
 
 
-                                <h2>Ordering</h2>
-                                <div className="form-inner-area" id="miBoton">
+                                <h2>Pick Up</h2>
+                                <div className="form-inner-area" id="form_pickup">
                                     <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
                                     <input type="date" name="order_date"/>
                                     <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
@@ -93,7 +102,101 @@ function Step3(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div>
+                            
+                                
+                                <h2>Delibery</h2>
+                                <div className="form-inner-area" id="fomr_delibery">
+                                    <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
+                                    <input type="date" name="order_date"/>
+                                    <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
+                                    <div className="comment-box">
+                                        <div>
+                                            <p><i className="fas fa-shopping-basket"></i> Quantity Basket</p>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-4">
+                                                <input
+                                                    type="number"
+                                                    id="give_away"
+                                                    name="give_away"
+                                                    min="0"
+                                                    max="100"
+                                                    placeholder="Give Away (S)"
+                                                />
+                                            </div>
+                                            <div className="col-4">
+                                                <input type="number" id="vip" name="vip" min="0" max="100"
+                                                    placeholder="V.I.P. (M)" />
+                                            </div>
+                                            <div className="col-4">
+                                                <input type="number" id="show_baskets" name="show_baskets" min="0" max="100"
+                                                    placeholder="Show Basket (L)" />                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2>Drop Of</h2>
+                                <div className="form-inner-area" id="form_dropof">
+                                    <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
+                                    <input type="date" name="order_date"/>
+                                    <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
+                                    <div className="comment-box">
+                                        <div>
+                                            <p><i className="fas fa-shopping-basket"></i> Quantity Basket</p>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-4">
+                                                <input
+                                                    type="number"
+                                                    id="give_away"
+                                                    name="give_away"
+                                                    min="0"
+                                                    max="100"
+                                                    placeholder="Give Away (S)"
+                                                />
+                                            </div>
+                                            <div className="col-4">
+                                                <input type="number" id="vip" name="vip" min="0" max="100"
+                                                    placeholder="V.I.P. (M)" />
+                                            </div>
+                                            <div className="col-4">
+                                                <input type="number" id="show_baskets" name="show_baskets" min="0" max="100"
+                                                    placeholder="Show Basket (L)" />                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+                                <h2>Fedex</h2>
+                                <div className="form-inner-area" id="form_fedex">
+                                    <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
+                                    <input type="date" name="order_date"/>
+                                    <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
+                                    <div className="comment-box">
+                                        <div>
+                                            <p><i className="fas fa-shopping-basket"></i> Quantity Basket</p>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-4">
+                                                <input
+                                                    type="number"
+                                                    id="give_away"
+                                                    name="give_away"
+                                                    min="0"
+                                                    max="100"
+                                                    placeholder="Give Away (S)"
+                                                />
+                                            </div>
+                                            <div className="col-4">
+                                                <input type="number" id="vip" name="vip" min="0" max="100"
+                                                    placeholder="V.I.P. (M)" />
+                                            </div>
+                                            <div className="col-4">
+                                                <input type="number" id="show_baskets" name="show_baskets" min="0" max="100"
+                                                    placeholder="Show Basket (L)" />                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                     <div className="comment-box">
                                         <p><i class="far fa-comment-alt"></i> Notes</p>
                                         <textarea name="full_comments" placeholder="Write here"></textarea>
@@ -102,8 +205,7 @@ function Step3(props) {
                             </div>
                         </div>
                     </div>
-                    {/*
-                    <!-- /.inner -->*/}
+                    
                     <div className="actions">
                         <ul>
 
