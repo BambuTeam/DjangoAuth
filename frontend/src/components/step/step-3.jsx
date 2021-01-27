@@ -23,7 +23,7 @@ function Step3(props) {
         secction.style.display(block);
         
     }
-    const handleClicDelibery = ()=>{
+    const handleClicDelivery = ()=>{
         var op  =   document.getElementById('miBoton')
         op.style.display = "none";
     }
@@ -62,7 +62,7 @@ function Step3(props) {
                             <ul className="d-md-flex">
 
                                 <button className="bg-white" id="btn_PickUp" onClick={handleClicPickUp}>PickUp</button>
-                                <button className="bg-white" id="btn_Delivery" onClick={handleClicDelibery}> no un mensaje</button>
+                                <button className="bg-white" id="btn_Delivery" onClick={handleClicDelivery}> no un mensaje</button>
                                 <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> no un mensaje</button>
                                 <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> no un mensaje</button>
                             
@@ -104,8 +104,8 @@ function Step3(props) {
                                 </div>
                             
                                 
-                                <h2>Delibery</h2>
-                                <div className="form-inner-area" id="fomr_delibery">
+                                <h2>Delivery</h2>
+                                <div className="form-inner-area" id="fomr_Delivery">
                                     <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
                                     <input type="date" name="order_date"/>
                                     <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
