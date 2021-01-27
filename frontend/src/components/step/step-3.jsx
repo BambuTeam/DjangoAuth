@@ -11,12 +11,12 @@ function Step3(props) {
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
     }
-    const handleClicDelibery = ()=>{
+    const handleClicDelivery = ()=>{
         var button = document.querySelector('#btn_Delivery')
         var btns = document.querySelectorAll('.bg-white')
         btns.forEach((el)=>{el.classList.remove('active')});
         button.classList.add('active');
-        var secction = document.querySelector('#fomr_delibery');
+        var secction = document.querySelector('#fomr_Delivery');
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
@@ -69,7 +69,7 @@ function Step3(props) {
                                 <ul className="d-md-flex">
 
                                     <button className="bg-white activen" id="btn_PickUp" onClick={handleClicPickUp}>PickUp</button>
-                                    <button className="bg-white" id="btn_Delivery" onClick={handleClicDelibery}> no un mensaje</button>
+                                    <button className="bg-white" id="btn_Delivery" onClick={handleClicDelivery}> no un mensaje</button>
                                     <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> no un mensaje</button>
                                     <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> no un mensaje</button>
                                 
@@ -110,8 +110,8 @@ function Step3(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="form-inner-area sec_pickup" id="fomr_delibery" display="none">
-                            <h2>Delibery</h2>
+                        <div className="form-inner-area sec_pickup" id="fomr_Delivery" display="none">
+                            <h2>Delivery</h2>
                             <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
                             <input type="date" name="order_date"/>
                             <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
