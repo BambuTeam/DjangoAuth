@@ -1,7 +1,7 @@
 import React from "react";
 
-class StepFour extends React.Component {
-    render() {
+function Step4 (props) {
+    
         return (
             <div id="invoiceholder">
                 <div id="headerimage2" />
@@ -161,10 +161,19 @@ class StepFour extends React.Component {
                     </div>
                     {/*End InvoiceBot*/}
                 </div>
+                <div className="actions">
+                    <ul>
+                        <li><button className="js-btn-prev" title="BACK" onClick={props.prev}>BACK <i
+                                    className="fa fa-arrow-left"></i></button></li>
+                        <li><button className="js-btn-next" title="NEXT" onClick={props.next}>SUBMIT <i
+                                    className="fa fa-arrow-right"></i></button></li>
+                    </ul>
+                </div>
                 {/*End Invoice*/}
             </div>
+
         );
-    }
+    
 }
 
-export default StepFour;
+export default Step4;

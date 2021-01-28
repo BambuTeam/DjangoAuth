@@ -80,7 +80,7 @@ p {
 
 #invoice {
     position: relative;
-    top: -290px;
+    top: -100px;
     margin: 0 auto;
     width: 1000px;
     background: #FFF;
@@ -312,9 +312,11 @@ form {
 
 .shape_order{
    
-        width: 150px;
+        width: 200px;
         height: 10px;
         transform: skew(20deg);
         background: linear-gradient(90deg, rgba(129,97,13,1)  0%, rgba(255,226,116,1) 35%, rgba(255,206,21,1) 100%);
+        -webkit-box-shadow: -9px 6px 19px 3px rgba(0,0,0,0.32); 
+        box-shadow: -9px 6px 19px 3px rgba(0,0,0,0.32);
       
 }
