@@ -25,7 +25,7 @@ const Login = ({ login, isAuthenticated }) => {
         login(email, password)
     }
     if (isAuthenticated){
-        return <Redirect to = '/step'/>
+        return <Redirect to = '/home'/>
     }
 
     //is the user autehticaded
@@ -96,13 +96,7 @@ const Login = ({ login, isAuthenticated }) => {
                             
                         </form>
                     </div>
-                    <div className="fxt-footer">
-                        <div className="fxt-transformY-50 fxt-transition-delay-9">
-                            <p>Don't have an account?
-                                <Link to="/signup" className="switcher-text2 inline-text">Register</Link>
-                            </p>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
 
