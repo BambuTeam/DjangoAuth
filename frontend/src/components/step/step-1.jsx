@@ -69,7 +69,7 @@ function Step1(props) {
                         <ul>
                             
                             <li><button className="js-btn-prev" title="BACK" onClick={props.next}>NEXT <i className="fa fa-arrow-right"></i></button></li>
-    <p>{ this.props.username }</p>
+    
                             
                             
                         </ul>
