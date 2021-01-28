@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link, Redirect
- }from 'react-router-dom';
+import { Redirect, Link }from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/auth';
+
+import logo from "../assets/img/logogoya.svg";
 
 
 
@@ -24,46 +25,88 @@ const Login = ({ login, isAuthenticated }) => {
         login(email, password)
     }
     if (isAuthenticated){
-        return <Redirect to = '/'/>
+        return <Redirect to = '/step'/>
     }
 
     //is the user autehticaded
     //redirec then to the home page
 
     return(
-        <div className='container mt-5'>
-            <h1>Sign In</h1>
-            <p> Sign into your Account</p>
-            <form onSubmit={e=>onSubmit(e)}>
-                <div className='form-group'>
-                    <input 
-                        className='form-control'
-                        type = 'email'
-                        placeholder = 'Email'
-                        name = 'email'
-                        value={email}
-                        onChange={e=>onChange(e)}
-                        required
-                    />
-                     <input 
-                        className='form-control'
-                        type = 'Password'
-                        placeholder = 'Password'
-                        name = 'password'
-                        value={password}
-                        onChange={e=>onChange(e)}
-                        minLength = '6'
-                        required
-                    />
+
+        <section className="fxt-template-animation fxt-template-layout8 login-bk" data-bg-image="img/figure/bg8-l.jpg">
+                <div className="fxt-content ">
+                    <div className="fxt-header">
+                        <a  className="fxt-logo" href = "#"><img src={ logo } alt="Logo" /></a>
+                    </div>
+                    <div className="lottie">
+            
+                    </div>
+                    
+                    <div className="fxt-form">
+                        <p>Login into your account</p>
+                        <form onSubmit={e=>onSubmit(e)}>
+                            <div className="form-group">
+                                <div className="fxt-transformY-50 fxt-transition-delay-1">
+                                    <input 
+                                        className="form-control" 
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={email}
+                                        placeholder="Email" 
+                                        onChange={e=>onChange(e)}
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="fxt-transformY-50 fxt-transition-delay-2">
+                                    <input 
+                                        id="password" 
+                                        type="password" 
+                                        className="form-control" 
+                                        name="password"
+                                        placeholder="********" 
+                                        required
+                                        value={password}
+                                        onChange={e=>onChange(e)}
+                                        minLength = '6'
+                                    />
+                                    <i toggle="#password" className="fa fa-fw fa-eye toggle-password field-icon" />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="fxt-transformY-50 fxt-transition-delay-4">
+                                    <button type="submit" className="fxt-btn-fill">Login</button>
+                                </div>
+                            </div>
+
+
+                            <div className="form-group">
+                                <div className="fxt-transformY-50 fxt-transition-delay-3">
+                                    <div className="fxt-checkbox-area">
+                                        <div className="checkbox">
+                                            <input id="checkbox1" type="checkbox" />
+                                            <label htmlFor="checkbox1">Keep me logged in</label>
+                                        </div>
+                                        <Link to="/reset-password" className="switcher-text">Forgot Password</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div className="fxt-footer">
+                        <div className="fxt-transformY-50 fxt-transition-delay-9">
+                            <p>Don't have an account?
+                                <Link to="/signup" className="switcher-text2 inline-text">Register</Link>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <button className='btn btn-primary' type='submit'>Login</button>
-            </form>
+            </section>
 
-
-            <p className="mt-3">Don't have an account <Link to='/signup'>Sign Up</Link></p>
-            <p className="mt-3">Don't have an account <Link to='/reset-password'>Forgot you password</Link></p>
-
-        </div>
+    
     );
 
 
