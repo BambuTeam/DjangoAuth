@@ -5,7 +5,8 @@ import {
     USER_LOADED_FAIL,
     AUTHENTICATED_SUCCESS,
     AUTHENTICATED_FAIL,
-    LOGOUT,PASSWORD_RESET_SUCCESS,
+    LOGOUT,
+    PASSWORD_RESET_SUCCESS,
     PASSWORD_RESET_FAIL,
     PASSWORD_RESET_CONFIRM_SUCCES,
     PASSWORD_RESET_CONFIRM_FAIL
@@ -46,16 +47,7 @@ export default function (state = initialState, action){
                 user:null
             }
         case LOGIN_FAIL:
-            localStorage.removeItem('access');
-            localStorage.removeItem('refresh');
-            return {
-                ...state,
-                access: null, 
-                refresh: null,
-                isAuthenticated: false,
-                user: null
-            }
-        case LOGIN_FAIL:
+        case LOGOUT:
             localStorage.removeItem('access');
             localStorage.removeItem('refresh');
             return {
@@ -75,7 +67,8 @@ export default function (state = initialState, action){
                 ...state,
                 isAuthenticated: false
             }
-        case LOGOUT,PASSWORD_RESET_SUCCESS:
+        
+        case PASSWORD_RESET_SUCCESS:
         case PASSWORD_RESET_FAIL:
         case PASSWORD_RESET_CONFIRM_SUCCES:
         case PASSWORD_RESET_CONFIRM_FAIL:

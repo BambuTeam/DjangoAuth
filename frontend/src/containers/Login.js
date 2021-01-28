@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect }from 'react-router-dom';
+import { Redirect, Link }from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/auth';
 
@@ -89,7 +89,7 @@ const Login = ({ login, isAuthenticated }) => {
                                             <input id="checkbox1" type="checkbox" />
                                             <label htmlFor="checkbox1">Keep me logged in</label>
                                         </div>
-                                        <a href="#" className="switcher-text">Forgot Password</a>
+                                        <Link to="/reset-password" className="switcher-text">Forgot Password</Link>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ const Login = ({ login, isAuthenticated }) => {
                     <div className="fxt-footer">
                         <div className="fxt-transformY-50 fxt-transition-delay-9">
                             <p>Don't have an account?
-                                <a href="#" className="switcher-text2 inline-text">Register</a>
+                                <Link to="/signup" className="switcher-text2 inline-text">Register</Link>
                             </p>
                         </div>
                     </div>

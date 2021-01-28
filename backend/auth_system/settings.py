@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-from datetme import timedelta
+from datetime import timedelta
 from pathlib import Path
 from decouple import config
 
