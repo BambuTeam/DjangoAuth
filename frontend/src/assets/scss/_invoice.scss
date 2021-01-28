@@ -27,6 +27,7 @@
 }
 
 h1 {
+    font-family: "Jost", sans-serif;
     font-size: 1.5em;
     color: #222;
 }
@@ -95,6 +96,8 @@ p {
     min-height: 120px;
     -webkit-box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
 box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
+border-left: solid 2px #2121213b;
+    border-right: solid 2px #2121213b;
 
 }
 
@@ -108,6 +111,11 @@ box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
 
 #invoice-toptitle {
     min-height: 50px;
+
+    h1{
+        font-family: "Jost", sans-serif;
+        text-transform: uppercase;
+    }
     
 }
 
@@ -120,6 +128,8 @@ box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
 
 #invoice-mid {
     min-height: 120px;
+    border-left: solid 2px #2121213b;
+    border-right: solid 2px #2121213b;
 }
 
 #invoice-reception {
@@ -133,6 +143,8 @@ box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
 
 #invoice-bot {
     min-height: 250px;
+    border-left: solid 2px #2121213b;
+    border-right: solid 2px #2121213b;
 }
 
 .rushico {
@@ -297,3 +309,12 @@ form {
   background-color: #bebebe;
   width: 100%;
 } */
+
+.shape_order{
+   
+        width: 150px;
+        height: 10px;
+        transform: skew(20deg);
+        background: linear-gradient(90deg, rgba(129,97,13,1)  0%, rgba(255,226,116,1) 35%, rgba(255,206,21,1) 100%);
+      
+}

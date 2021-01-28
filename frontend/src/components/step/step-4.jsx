@@ -7,7 +7,8 @@ class StepFour extends React.Component {
                 <div id="headerimage2" />
                 <div id="invoice" className="effect2">
                     <div id="invoice-toptitle">
-                        <h1 style={{textDecoration: 'underline'}}>Regular/Custom</h1>
+                        <h1 class="shape_order"></h1>
+                        <h1>Regular/Custom</h1>
                         <div>
                             <img src="http://crossmediaplus.com/s3/logo-goyah.svg" alt="Goya Baskets" />
                             <div className="rushico" />
