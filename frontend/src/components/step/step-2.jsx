@@ -8,7 +8,9 @@ function Step2(props) {
                     <div className="inner pb-100 clearfix">
                         <div className="form-content pera-content col-12">
                             <div className="step-inner-content">
-                                <span className="step-no bottom-line">Step 2</span>
+                                <span className="step-no ">Step 2</span>
+                                <hr></hr>
+                                <br></br>
                                 <div className="step-progress float-right">
                                     <span>2 of 3 completed</span>
                                     <div className="step-progress-bar">
