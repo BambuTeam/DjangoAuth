@@ -1,0 +1,299 @@
+
+
+.bg-page {
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,900,700,500,300,100);
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+::selection {
+    background: #f31544;
+    color: #FFF;
+}
+
+::moz-selection {
+    background: #f31544;
+    color: #FFF;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #222;
+}
+
+h2 {
+    font-size: .9em;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 2em;
+}
+
+p {
+    font-size: .7em;
+    color: #666;
+    line-height: 1.2em;
+}
+
+#invoiceholder {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+#headerimage {
+    z-index: -1;
+    position: relative;
+    top: -50px;
+    height: 350px;
+    /* background-image: url('https://images.unsplash.com/photo-1557682260-96773eb01377?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3115&q=80'); */
+    background: rgb(33, 33, 33);
+    background: linear-gradient(0deg, rgba(33, 33, 33, 1) 0%, rgba(217, 181, 44, 1) 52%, rgba(255, 206, 21, 1) 100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
+    overflow: hidden;
+    background-attachment: fixed;
+    /* background-size: 1920px 80%; */
+    background-position: 50% -90%;
+}
+
+#headerimage2{
+    height: 350px;
+
+}
+
+#invoice {
+    position: relative;
+    top: -290px;
+    margin: 0 auto;
+    width: 1000px;
+    background: #FFF;
+}
+
+[id*='invoice-'] {
+    /* Targets all id with 'col-' */
+    border-bottom: 1px solid #EEE;
+    padding: 30px;
+}
+
+#invoice-top {
+    min-height: 120px;
+    -webkit-box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
+box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
+
+}
+
+#invoice-top-rush {
+    min-height: 10px;
+    -webkit-box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
+    box-shadow: -11px -16px 31px -12px rgba(0,0,0,0.41);
+    background-color: grey;
+
+}
+
+#invoice-toptitle {
+    min-height: 50px;
+    
+}
+
+#invoice-toptitle img {
+  justify-items: center;
+  justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#invoice-mid {
+    min-height: 120px;
+}
+
+#invoice-reception {
+    min-height: 120px;
+
+  border: 3px solid;
+  border-image-slice: 1;
+    border-image-source: linear-gradient(to right , #d2a206, #ebc734);
+}
+
+
+#invoice-bot {
+    min-height: 250px;
+}
+
+.rushico {
+
+    float: right;
+    height: 150px;
+    width: 150px;
+    background: url(http://crossmediaplus.com/s3/rushclick.svg) no-repeat;
+    /* background-size: 100px 100px; */
+}
+
+.supervisor {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://crossmediaplus.com/s3/supervisor.svg) no-repeat;
+    background-size: 60px 60px;
+}
+
+.logoh {
+  margin-left: auto;
+  margin-right: auto;
+    /* float: left; */
+    height: 90px;
+    width: 90px;
+    background: url(http://crossmediaplus.com/s3/logo-goyah.svg) no-repeat;
+    background-size: 90px 90px;
+    padding: 0px;
+}
+
+.logoh img {
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clientlogo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
+    background-size: 60px 60px;
+    border-radius: 50px;
+}
+
+.reception {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://crossmediaplus.com/s3/buzon.svg) no-repeat;
+    background-size: 60px 60px;
+    border-radius: 50px;
+}
+
+.info {
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+.title {
+    float: right;
+}
+
+.title p {
+    text-align: right;
+}
+
+#project {
+    margin-left: 52%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 0 5px 15px;
+    border: 1px solid #5050505b;
+}
+
+.tabletitle {
+    padding: 5px;
+    background: #5050505b;
+}
+
+.service {
+    border: 1px solid #EEE;
+}
+
+.item {
+    width: 50%;
+}
+
+.itemtext {
+    font-size: .9em;
+}
+
+#legalcopy {
+    margin-top: 30px;
+}
+
+form {
+    float: right;
+    margin-top: 30px;
+    text-align: right;
+}
+
+
+.effect2 {
+    position: relative;
+}
+
+.effect2:before,
+.effect2:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.effect2:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
+
+
+.legal {
+    width: 70%;
+}
+
+.ordernumber{
+  background-color: #fefefe;
+  color: #ffce15;
+  font-size: 25px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+/* .typeorder h1{
+  background-color: #bebebe;
+  width: 100%;
+} */

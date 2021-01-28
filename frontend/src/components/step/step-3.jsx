@@ -60,7 +60,7 @@ function Step3(props) {
                                 <span>3 of 3 completed</span>
                                 <div className="step-progress-bar">
                                     <div className="progress">
-                                        <div className="progress-bar" style={{width: '80%' }}></div>
+                                        <div className="progress-bar" style={{width: '70%' }}></div>
                                     </div>
                                 </div>
                             </div>
