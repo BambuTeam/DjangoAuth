@@ -4,6 +4,8 @@ import { Steps, Step } from "react-step-builder";
 import Step1 from "./step/step-1";
 import Step2 from "./step/step-2";
 import Step3 from "./step/step-3";
+import Step4 from "./step/step-4";
+
 
 import svg from '../../src/assets/img/sideimg.svg';
 
@@ -40,6 +42,8 @@ function VersionOne() {
                         <Step component={Step1} />
                         <Step component={Step2} />
                         <Step component={Step3} />
+                        <Step component={Step4} />
+
                     </Steps>
                     </div>
 
