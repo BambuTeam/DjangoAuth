@@ -6,7 +6,22 @@ body {
 }
 
 .login-bk{
-  background: #ffc107 url("../img/bk-imag.svg") no-repeat fixed center;
+  /* background: #ffc107 url("../img/bk-imag.svg") no-repeat fixed center; */
+  background: linear-gradient(-45deg, #b9b9b9, #fcbd00, #ffc107, #ffc107  );
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 
 }
 

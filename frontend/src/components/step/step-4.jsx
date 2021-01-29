@@ -1,13 +1,14 @@
 import React from "react";
 
-class StepFour extends React.Component {
-    render() {
+function Step4 (props) {
+    
         return (
             <div id="invoiceholder">
                 <div id="headerimage2" />
                 <div id="invoice" className="effect2">
                     <div id="invoice-toptitle">
-                        <h1 style={{textDecoration: 'underline'}}>Regular/Custom</h1>
+                        <h1 class="shape_order"></h1>
+                        <h1>Regular/Custom</h1>
                         <div>
                             <img src="http://crossmediaplus.com/s3/logo-goyah.svg" alt="Goya Baskets" />
                             <div className="rushico" />
@@ -160,10 +161,19 @@ class StepFour extends React.Component {
                     </div>
                     {/*End InvoiceBot*/}
                 </div>
+                <div className="actions">
+                    <ul>
+                        <li><button className="js-btn-prev" title="BACK" onClick={props.prev}>BACK <i
+                                    className="fa fa-arrow-left"></i></button></li>
+                        <li><button className="js-btn-next" title="NEXT" onClick={props.next}>SUBMIT <i
+                                    className="fa fa-arrow-right"></i></button></li>
+                    </ul>
+                </div>
                 {/*End Invoice*/}
             </div>
+
         );
-    }
+    
 }
 
-export default StepFour;
+export default Step4;
