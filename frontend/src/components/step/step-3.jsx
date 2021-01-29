@@ -1,11 +1,13 @@
 import React from "react";
 
 function Step3(props) {
+    var step3 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(3)');
+    var step2 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2)');
+    step3.classList.add('js-active');
+    step3.classList.add('current')
+    step2.classList.remove('current')
+    
 
-    if (this.props.currentStep){
-        var stepnumber = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2) > span')
-        stepnumber.classList.add('js-active');
-    }
     const handleClicPickUp = ()=>{
         var button = document.querySelector('#btn_PickUp')
         var btns = document.querySelectorAll('.bg-white')
