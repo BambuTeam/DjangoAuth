@@ -169,6 +169,16 @@
 
 @media screen and (max-width: 991px) {
 
+	.budget-area{
+		.opti-list{
+			ul{
+				margin-top: 10px;
+				display: grid;
+				width: 908px;	
+			}
+		}
+	}
+
 	#invoice{
 		position: relative;
 		top: -100px;
