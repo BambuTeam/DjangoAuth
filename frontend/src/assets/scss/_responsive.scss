@@ -198,6 +198,19 @@
 }
 
 @media screen and (max-width: 767px) {
+
+	.fxt-logo {
+		display: block;
+		margin-bottom: 30px;
+		max-width: 60vw;
+		margin-left: 30px;
+
+		img{
+			
+		}
+	}
+
+
 	.steps li {
 		display: inline-block;
 		margin-right: 30px;
