@@ -208,7 +208,7 @@ h6 {
                 height: 55px;
                 position: absolute;
                 border-radius: 100%;
-                border: 3px solid whitesmoke;
+                border: 3px solid #e7811d;
                 z-index: 3;
                 -webkit-box-shadow: -4px 11px 29px 10px rgba(33,33,33,0.32); 
                 box-shadow: -4px 11px 29px 10px rgba(33,33,33,0.32);
@@ -216,9 +216,9 @@ h6 {
 
             span {
                 width: 40px;
-                color: #fff;
+                color: #fefefe;
                 height: 40px;
-                font-size: 16px;
+                font-size: 30px;
                 font-weight: 700;
                 line-height: 40px;
                 border-radius: 50%;
@@ -264,7 +264,7 @@ h6 {
             &.js-active {
 
                 span {
-                    background: $base-color;
+                    background: #e7811d;
 
                     &:after {
                         height: 86px;
@@ -284,7 +284,9 @@ h6 {
             }
             &.current {
                 span {
-                    background: $base-color;
+                    -webkit-box-shadow: -7px 0px 27px 4px rgba(0,0,0,0.63); 
+                    box-shadow: -7px 0px 27px 4px rgba(0,0,0,0.63);
+                    background: #e7811d;
 
                     &:after {
                         height: 50px;
