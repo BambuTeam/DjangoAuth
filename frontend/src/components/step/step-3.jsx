@@ -162,7 +162,7 @@ function Step3(props) {
 
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="dropof_first_name" 
@@ -173,7 +173,7 @@ function Step3(props) {
                                         onChange={props.handleChange} 
                                         />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="dropof_last_name" 
@@ -191,7 +191,7 @@ function Step3(props) {
 
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="dropof_address" 
@@ -203,7 +203,7 @@ function Step3(props) {
 
                                         />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="dropof_city" 
@@ -275,7 +275,7 @@ function Step3(props) {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
                                         <input 
                                         name="dropof_zip" 
                                         type="text" 
@@ -286,7 +286,7 @@ function Step3(props) {
                                         />
 
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
                                         <input 
                                         type="tel" 
                                         name="dropof_phone" 
@@ -310,7 +310,7 @@ function Step3(props) {
                             <h2>FedEx INFORMATION</h2>
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="fedex_first_name" 
@@ -321,7 +321,7 @@ function Step3(props) {
                                         onChange={props.handleChange} 
                                         />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="fedex_Last_name" 
@@ -339,7 +339,7 @@ function Step3(props) {
 
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input
                                             type="text" 
                                             name="custom_order" 
@@ -351,7 +351,7 @@ function Step3(props) {
         
                                         />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
                                         <input 
                                         type="text" 
                                         name="custom_order" 
@@ -366,7 +366,7 @@ function Step3(props) {
 
                             <div>
                                     
-                                    <select className="col-lg-12"
+                                    <select className="col-lg-12 col-md-6 col-sm-12"
                                     name = "fedex_state"
                                     value = {props.getState('fedex_state', '')}
                                     onChange={props.handleChange} 
@@ -426,7 +426,7 @@ function Step3(props) {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
                                         <input 
                                         name="custom_order" 
                                         type="fedex_state" 
@@ -438,7 +438,7 @@ function Step3(props) {
                                         />
 
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
                                         <input 
                                         type="tel" 
                                         name="fedex_phone" 
