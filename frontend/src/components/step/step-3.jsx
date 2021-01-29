@@ -7,6 +7,7 @@ function Step3(props) {
     step3.classList.add('current')
     step2.classList.remove('current')
     
+    
 
     const handleClicPickUp = ()=>{
         var button = document.querySelector('#btn_PickUp')

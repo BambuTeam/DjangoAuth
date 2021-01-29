@@ -7,6 +7,25 @@ import { StepComponentProps } from "react-step-builder";
 
 
 function Step1(props: StepComponentProps) {
+    
+    
+    var step1 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(1)');
+    var step2 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2)');
+    var step3 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(3)');
+
+    try {
+    step2.classList.remove('js-active');
+    step2.classList.remove('current')
+    step1.classList.add('current');
+    step1.classList.add('js-active');
+    step3.classList.remove('current');
+    step3.classList.remove('js-active');
+    } catch (error) {
+        
+        console.error(error)
+    }
+    
+
 
 
 
