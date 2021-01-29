@@ -168,6 +168,62 @@
 }
 
 @media screen and (max-width: 991px) {
+
+	#invoice{
+		position: relative;
+		top: -100px;
+		margin: 0 auto;
+		width: 100vw !important;
+		background: #FFF;
+
+		.title{
+			float: right;
+			font-size: 7px;}
+
+		.supervisor{
+			float: left;
+			height: 20px;
+			width: 20px;
+			background: url(http://crossmediaplus.com/s3/supervisor.svg) no-repeat;
+			background-size: 20px 20px;
+		}
+	}
+
+	#invoice-mid{
+		.clientlogo{
+			
+			float: left;
+			height: 20px;
+			width: 20px;
+			background: url(http://crossmediaplus.com/s3/supervisor.svg) no-repeat;
+			background-size: 20px 20px;
+		}
+	}
+
+	#project{
+		margin-left: 0% !important;
+		margin-top: 54px;
+
+	}
+	
+	#invoice-toptitle h1{
+		text-align: center;
+
+		&.shape_order{
+			text-align: center;
+			justify-content: center;
+			margin-left: 55px;	
+		}
+	}
+
+	.title p{
+		font-size: 10px;
+		color: #000;
+		font-weight: bold;
+	}	
+
+
+
 	.pb-100, .pb-200 {
 		padding-bottom: 30px;
 	}
@@ -198,6 +254,39 @@
 }
 
 @media screen and (max-width: 767px) {
+
+	#invoice{
+		position: relative;
+		top: -100px;
+		margin: 0 auto;
+		width: 100vw !important;
+		background: #FFF;
+	}
+
+
+	.actions{
+		li{
+			button{
+				height: 77px;
+				width: 165px;
+				color: #fff;
+				display: block;
+				font-size: 25px;
+				font-weight: 500;
+				border-radius: 5px;
+				line-height: 75px;
+				text-align: center;
+				background-color: #151f46;
+				border: 3px solid #FFCE0E;
+				cursor: pointer;
+				margin-left: 16px;
+			}
+		}
+	}
+
+	
+
+
 
 	.fxt-logo {
 		display: block;
