@@ -157,7 +157,7 @@ function Step4 (props) {
                                     quam vel purus.
                                     Curabitur semper malesuada urna ut suscipit.</p>
                             </div>
-                        </div>
+                        </div>     
                     </div>
                     {/*End InvoiceBot*/}
                 </div>
@@ -172,7 +172,7 @@ function Step4 (props) {
 
 
                 <p>Rush: {props.state.is_rush}</p>
-                <p>orter type {props.state.order_t}</p>
+                <p>orter type {props.state.is_custom}</p>
 
 
                 

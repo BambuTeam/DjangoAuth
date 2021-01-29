@@ -7,7 +7,32 @@ import { StepComponentProps } from "react-step-builder";
 
 
 function Step1(props: StepComponentProps) {
+
+
+
     
+    const [is_rush, setRush] = React.useState(true);
+    const [is_custom, setOrderType] = React.useState(false);
+    props.state.is_rush='true';
+    props.state.is_custom = 'false';
+    
+    if (is_rush){
+        props.state.is_rush='true';
+        console.log(`rush ${is_rush}`)
+    }else{
+        props.state.is_rush='false';
+        console.log(`rush ${is_rush}`)
+    }
+
+    if (is_custom){
+        props.state.is_custom = 'true';
+        console.log(`custom ${is_custom}`)
+    }else{
+        props.state.is_custom = 'false';
+        console.log(`custom ${is_custom}`)
+    }
+
+
 
     const handleClicDropOf = ()=>{
         var button = document.querySelector('#btn-regular-order');
@@ -15,6 +40,7 @@ function Step1(props: StepComponentProps) {
         cajas.forEach((el)=>el.classList.remove('active'));
         button.classList.add('active');
         document.getElementById("rd-regular-order").checked = true;
+        setOrderType(false)
     }
     const handleClicCustomORder = () => {
         var button = document.querySelector('#btn-custom-order');
@@ -22,6 +48,7 @@ function Step1(props: StepComponentProps) {
         cajas.forEach((el)=>el.classList.remove('active'));
         button.classList.add('active');
         document.getElementById("rd-custom-order").checked = true;
+        setOrderType(true)
     }
     
         return (
@@ -43,10 +70,10 @@ function Step1(props: StepComponentProps) {
                                 <div className="container-rush">
                                     <div className="rushsvg">
                                         <input 
-                                        type="checkbox" 
-                                        name="is_rush" 
-                                        value = {props.getState('is_rush', 'rush')} 
-                                        onChange={props.handleChange}
+                                    
+                                        type="checkbox"
+                                        checked={is_rush}
+                                        onChange={() => setRush(!is_rush)}
                                         /> <label></label>
                                     </div>
                                 </div>
@@ -70,8 +97,8 @@ function Step1(props: StepComponentProps) {
                                                             id = "rd-regular-order"
                                                             defaultValue="Regular Order" 
                                                             defaultChecked
-                                                            value = {props.getState('order_t', 'Regular Order')}
-                                                            onChange={props.handleChange} 
+                                                            
+                                                            onChange={()=>setOrderType(false)} 
                                                         />
                                                     </span>
                                                 </span>
@@ -94,8 +121,8 @@ function Step1(props: StepComponentProps) {
                                                         id = "rd-custom-order"
                                                         name="order_type"
                                                         defaultValue="Custom Order"
-                                                        value = {props.getState('order_t', 'Custom Order')}
-                                                        onChange={props.handleChange} 
+                                                        
+                                                        
                                                         />
                                                     </span>
                                                 </span>
