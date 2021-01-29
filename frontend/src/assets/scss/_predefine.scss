@@ -208,8 +208,10 @@ h6 {
                 height: 55px;
                 position: absolute;
                 border-radius: 100%;
-                border: 2px solid #6b59d300;
+                border: 3px solid whitesmoke;
                 z-index: 3;
+                -webkit-box-shadow: -4px 11px 29px 10px rgba(33,33,33,0.32); 
+                box-shadow: -4px 11px 29px 10px rgba(33,33,33,0.32);
             }
 
             span {
