@@ -6,7 +6,22 @@ body {
 }
 
 .login-bk{
-  background: #ffc107 url("../img/bk-imag.svg") no-repeat fixed center;
+  /* background: #ffc107 url("../img/bk-imag.svg") no-repeat fixed center; */
+  background: linear-gradient(-45deg, #b1b1b1, #fcbd00, #ffc107, #ffc107  );
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 
 }
 
@@ -167,8 +182,8 @@ color: #212121;
     border: 5px;
     color: #fff;
     border-radius: 3px;
-    background-color: #ffce07;
-    border-color: #002f87;
+    background-color:  #002f87;
+    border-color: #ffce07;
     padding: 10px 36px;
     margin-bottom: 10px;
     width: 100%;
@@ -177,8 +192,8 @@ color: #212121;
     transition: all 0.3s ease-in-out;
   }
   .fxt-template-layout8 .fxt-btn-fill:hover {
-    background-color: #002f87;
-    border-color: #002f87;
+    background-color: #000;
+    border-color: #fefefe;
   }
   .fxt-template-layout8 .fxt-btn-fill:focus {
     outline: none;

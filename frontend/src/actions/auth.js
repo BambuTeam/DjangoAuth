@@ -72,11 +72,13 @@ export const load_user = ()=> async dispatch =>{
         }catch (err){
             dispatch({
                 type: USER_LOADED_FAIL,
+                
             })
         }
     }else{
         dispatch({
-            type: USER_LOADED_FAIL
+            type: USER_LOADED_FAIL,
+            error: 'authe error'
         })
     }
 };
@@ -100,6 +102,7 @@ export const login = (email, password)=> async dispatch =>{
     }catch (err){
         dispatch({
             type: LOGIN_FAIL,
+            
         })
     }
 };
@@ -109,7 +112,8 @@ export const login = (email, password)=> async dispatch =>{
 
 export const logout=() => dispatch=>{
     dispatch({
-        type:LOGOUT
+        type:LOGOUT,
+        error: null
     })
 }
 

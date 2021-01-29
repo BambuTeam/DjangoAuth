@@ -208,15 +208,17 @@ h6 {
                 height: 55px;
                 position: absolute;
                 border-radius: 100%;
-                border: 2px solid #6b59d300;
+                border: 3px solid whitesmoke;
                 z-index: 3;
+                -webkit-box-shadow: -4px 11px 29px 10px rgba(33,33,33,0.32); 
+                box-shadow: -4px 11px 29px 10px rgba(33,33,33,0.32);
             }
 
             span {
                 width: 40px;
-                color: #fff;
+                color: #fefefe;
                 height: 40px;
-                font-size: 16px;
+                font-size: 30px;
                 font-weight: 700;
                 line-height: 40px;
                 border-radius: 50%;
@@ -282,7 +284,9 @@ h6 {
             }
             &.current {
                 span {
-                    background: $base-color;
+                    -webkit-box-shadow: -7px 0px 27px 4px rgba(0,0,0,0.63); 
+            box-shadow: -7px 0px 27px 4px rgba(0,0,0,0.63);
+                    background: #000;
 
                     &:after {
                         height: 50px;
@@ -578,4 +582,9 @@ select.form-control {
         height: 2.5rem;
         font-size: 0.85rem;
     }
+}
+
+.navbar-light {
+    float: right;
+    padding: 0.1rem 1rem;
 }

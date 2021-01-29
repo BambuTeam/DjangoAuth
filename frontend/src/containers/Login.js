@@ -96,13 +96,7 @@ const Login = ({ login, isAuthenticated }) => {
                             
                         </form>
                     </div>
-                    <div className="fxt-footer">
-                        <div className="fxt-transformY-50 fxt-transition-delay-9">
-                            <p>Don't have an account?
-                                <Link to="/signup" className="switcher-text2 inline-text">Register</Link>
-                            </p>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -114,7 +108,8 @@ const Login = ({ login, isAuthenticated }) => {
 };
  
 const mapStateToProps = state =>({
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+    error: state.auth.error
 })
 
 export default connect(mapStateToProps, { login })(Login);

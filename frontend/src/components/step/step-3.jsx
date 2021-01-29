@@ -1,6 +1,14 @@
 import React from "react";
 
 function Step3(props) {
+    var step3 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(3)');
+    var step2 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2)');
+    step3.classList.add('js-active');
+    step3.classList.add('current')
+    step2.classList.remove('current')
+    props.state.deliberyType = 'pickup'
+    
+
     const handleClicPickUp = ()=>{
         var button = document.querySelector('#btn_PickUp')
         var btns = document.querySelectorAll('.bg-white')
@@ -10,6 +18,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'pickup'
     }
     const handleClicDelivery = ()=>{
         var button = document.querySelector('#btn_Delivery')
@@ -20,6 +29,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'delibery'
     }
 
     const handleClicDropOf = ()=>{
@@ -31,6 +41,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'dropof'
     }
     const handleClicFedex = ()=>{
         var button = document.querySelector('#btn_Fedex')
@@ -41,6 +52,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'fedex'
     }
 
 
@@ -60,7 +72,7 @@ function Step3(props) {
                                 <span>3 of 3 completed</span>
                                 <div className="step-progress-bar">
                                     <div className="progress">
-                                        <div className="progress-bar" style={{width: '80%' }}></div>
+                                        <div className="progress-bar" style={{width: '70%' }}></div>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +84,7 @@ function Step3(props) {
                             <div className="opti-list">
                                 <ul className="d-md-flex">
 
-                                    <button className="bg-white activen" id="btn_PickUp" onClick={handleClicPickUp}>PickUp</button>
+                                    <button className="bg-white active" id="btn_PickUp" onClick={handleClicPickUp}>PickUp</button>
                                     <button className="bg-white" id="btn_Delivery" onClick={handleClicDelivery}> Delivery to GOYA</button>
                                     <button className="bg-white" id="btn_Drop_of" onClick={handleClicDropOf}> Drop off </button>
                                     <button className="bg-white" id="btn_Fedex" onClick={handleClicFedex}> FedEx</button>
@@ -85,34 +97,97 @@ function Step3(props) {
                             
                         <div className="form-inner-area sec_pickup" id="form_pickup">
                             <h2>Pick Up</h2>
-                            <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Messenger"/>
-                            <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Company"/>
-                            <input type="date" name="order_date" class="form-control valid" aria-invalid="false" placeholder="Date"/>
-                            <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
+                            
+                            <input 
+                            type="text" 
+                            name="pickup_message" 
+                            class="form-control valid" 
+                            aria-invalid="false" 
+                            placeholder="Messenger"
+                            value = {props.getState('pickup_message', '')}
+                            onChange={props.handleChange} 
+                            />
+                            <input 
+                            type="text" 
+                            name="pickup_company" 
+                            class="form-control valid" 
+                            aria-invalid="false" 
+                            placeholder="Company"
+                            value = {props.getState('pickup_company', '')}
+                            onChange={props.handleChange} 
+                            />
+                            <input 
+                            type="date"
+                            name="pickup_order_date" 
+                            class="form-control valid" 
+                            aria-invalid="false" 
+                            placeholder="Date"
+                            value = {props.getState('pickup_order_date', '')}
+                            onChange={props.handleChange} 
+                            />
+                            <input 
+                            type="time" 
+                            id="hour" 
+                            name="pickup_hour" 
+                            min="09:00" 
+                            max="24:00"
+                            value = {props.getState('pickup_hour', '')}
+                            onChange={props.handleChange} 
+                             />
                             <div className="comment-box">
                                 
                                 
                             </div>
                         </div>
-                        <div className="form-inner-area sec_pickup" id="fomr_Delivery" display="none">
+                        <div className="form-inner-area sec_pickup" id="fomr_Delivery" style={{display:'none'}}>
                             <h2>GOYA Reception</h2>
-                            <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="First Name"/>
-                            <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Last Name"/>
+                            <input 
+                            type="text" 
+                            name="delivery_first_name" 
+                            class="form-control valid" 
+                            aria-invalid="false" 
+                            placeholder="First Name"
+                            value = {props.getState('delivery_first_name', '')}
+                            onChange={props.handleChange} 
+                            />
+                            <input 
+                            type="text" 
+                            name="delivery_last_name" 
+                            class="form-control valid" 
+                            aria-invalid="false" 
+                            placeholder="Last Name"
+                            value = {props.getState('delivery_last_name', '')}
+                            onChange={props.handleChange} 
+                            />
                         </div>
 
                             
-                        <div className="form-inner-area sec_pickup" id="form_dropof">
+                        <div className="form-inner-area sec_pickup" id="form_dropof" style={{display:'none'}}>
                             <h2>Drop off information</h2>
 
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="First Name" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="dropof_first_name" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="First Name" 
+                                        value = {props.getState('dropof_first_name', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="First Name" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="dropof_last_name" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="First Name" 
+                                        value = {props.getState('dropof_last_name', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
                                 </div>
 
@@ -121,18 +196,35 @@ function Step3(props) {
 
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Address" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="dropof_address" 
+                                        class="form-control valid" 
+                                        aria-invalid="false" 
+                                        placeholder="Address"
+                                        value = {props.getState('dropof_address', '')}
+                                        onChange={props.handleChange} 
+
+                                        />
                                     </div>
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="City" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="dropof_city" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="City" 
+                                        value = {props.getState('dropof_city', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
                                 </div>
 
                             <div>
                                     
-                                    <select className="col-lg-12">
+                                    <select className="col-lg-12" name = "dropof_state" value = {props.getState('dropof_state', '')}
+                                        onChange={props.handleChange} >
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
                                         <option value="AZ">Arizona</option>
@@ -188,13 +280,28 @@ function Step3(props) {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-6">
-                                        <input name="custom_order" type="text" pattern="[0-9]{5}" placeholder="Z I P"/>
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
+                                        <input 
+                                        name="dropof_zip" 
+                                        type="text" 
+                                        pattern="[0-9]{5}" 
+                                        placeholder="Z I P"
+                                        value = {props.getState('dropof_zip', '')}
+                                        onChange={props.handleChange} 
+                                        />
 
                                     </div>
-                                    <div className="col-6">
-                                        <input type="tel" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="Format: 123-45-678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
+                                        <input 
+                                        type="tel" 
+                                        name="dropof_phone" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="Format: 123-45-678" 
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                                        value = {props.getState('dropof_zip', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
                                     
                                 </div>
@@ -204,17 +311,31 @@ function Step3(props) {
 
                         </div>
 
-                        <div className="form-inner-area sec_pickup" id="form_fedex">
+                        <div className="form-inner-area sec_pickup" id="form_fedex" style={{display:'none'}}>
                             <h2>FedEx INFORMATION</h2>
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="First Name" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="fedex_first_name" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="First Name" 
+                                        value = {props.getState('fedex_first_name', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="First Name" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="fedex_Last_name" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="Last Name" 
+                                        value = {props.getState('dropof_zip', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
                                 </div>
 
@@ -223,18 +344,38 @@ function Step3(props) {
 
                             <div className="col-12">
                                 <div className="row">
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Address" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input
+                                            type="text" 
+                                            name="custom_order" 
+                                           className="form-control valid" 
+                                            aria-invalid="false" 
+                                            placeholder="Address" 
+                                            value = {props.getState('dropof_zip', '')}
+                                        onChange={props.handleChange} 
+        
+                                        />
                                     </div>
-                                    <div className="col-6">
-                                        <input type="text" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="City" />
+                                    <div className="col-lg-12 col-md-6 col-sm-12">
+                                        <input 
+                                        type="text" 
+                                        name="custom_order" 
+                                        className="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="City" 
+                                        value = {props.getState('dropof_zip', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
                                 </div>
 
                             <div>
                                     
-                                    <select className="col-lg-12">
+                                    <select className="col-lg-12 col-md-6 col-sm-12"
+                                    name = "fedex_state"
+                                    value = {props.getState('fedex_state', '')}
+                                    onChange={props.handleChange} 
+                                    >
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
                                         <option value="AZ">Arizona</option>
@@ -290,13 +431,29 @@ function Step3(props) {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-6">
-                                        <input name="custom_order" type="text" pattern="[0-9]{5}" placeholder="Z I P"/>
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
+                                        <input 
+                                        name="custom_order" 
+                                        type="fedex_state" 
+                                        pattern="[0-9]{5}" 
+                                        placeholder="Z I P"
+                                        value = {props.getState('fedex_zip', '')}
+                                        onChange={props.handleChange} 
+                                        
+                                        />
 
                                     </div>
-                                    <div className="col-6">
-                                        <input type="tel" name="custom_order" class="form-control valid"
-                                            aria-invalid="false" placeholder="Format: 123-45-678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+                                    <div className="col-lg-6 col-md-6 col-sm-12">
+                                        <input 
+                                        type="tel" 
+                                        name="fedex_phone" 
+                                        class="form-control valid"
+                                        aria-invalid="false" 
+                                        placeholder="Format: 123-45-678" 
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                                        value = {props.getState('fedex_phone', '')}
+                                        onChange={props.handleChange} 
+                                        />
                                     </div>
                                     
                                 </div>
@@ -304,7 +461,10 @@ function Step3(props) {
                         </div>
                         <div className="comment-box">
                             <p><i class="far fa-comment-alt"></i> Notes</p>
-                            <textarea name="full_comments" placeholder="Write here"></textarea>
+                            <textarea name="fedes_comments" placeholder="Write here"
+                            value = {props.getState('fedes_comments', '')}
+                            onChange={props.handleChange} 
+                            ></textarea>
                         </div>
                     </div>
                 </div>

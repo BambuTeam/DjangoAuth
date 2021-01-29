@@ -1,7 +1,20 @@
 import React from "react";
+import { StepComponentProps } from "react-step-builder";
 
 
-function Step2(props) {
+function Step2(props: StepComponentProps ) {
+    var step3 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(3)');
+
+    var step1 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(1)');
+    var step2 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2)');
+    step2.classList.add('js-active');
+    step1.classList.add('current')
+    step1.classList.remove('current');
+    step1.classList.add('js-active');
+    step3.classList.remove('current');
+    step3.classList.remove('js-active');
+
+
     return (
         <div className="multisteps-form__panel" data-animation="slideHorz">
                 <div className="wizard-forms">
@@ -21,32 +34,81 @@ function Step2(props) {
                                 </div>
                                 <h2>Ordering</h2>
                                 <div className="form-inner-area">
-                                    <input type="text" name="custom_order" class="form-control valid" aria-invalid="false" placeholder="Description of Order"/>
-                                    <input type="date" name="order_date"/>
-                                    <input type="time" id="hour" name="hour" min="09:00" max="24:00" />
+                                    
+                                    <input 
+                                    type="text" 
+                                    name="custom_order_text" 
+                                    class="form-control valid" 
+                                    aria-invalid="false" 
+                                    placeholder="Description of Order"
+                                    value = {props.getState('custo_roder_text', '')}
+                                    onChange={props.handleChange} 
+                                    />
+                                    <input 
+                                    type="date" 
+                                    name="order_date"
+                                    value = {props.getState('order_date', '')}
+                                    onChange={props.handleChange} 
+                                    />
+                                    <input 
+                                    type="time" 
+                                    id="hour" 
+                                    name="hour" 
+                                    min="09:00" 
+                                    max="24:00"
+                                    value = {props.getState('hour', '')}
+                                    onChange={props.handleChange} 
+                                     />
                                     <div className="comment-box">
                                         <div>
                                             <p><i className="fas fa-shopping-basket"></i> Quantity Basket</p>
                                         </div>
                                         <div className="row">
                                             <div className="col-lg-4 col-lg-4 col-sm-12">
-                                                <input type="number" id="give_away" name="give_away" min="0" max="100"
-                                                    placeholder="Give Away (S)" />
+                                                <input 
+                                                type="number" 
+                                                id="give_away" 
+                                                name="give_away" 
+                                                min="0" 
+                                                max="100"
+                                                placeholder="Give Away (S)" 
+                                                value = {props.getState('give_away', '')}
+                                                onChange={props.handleChange} 
+                                                />
                                             </div>
                                             <div className="col-lg-4 col-lg-4 col-sm-12">
-                                                <input type="number" id="vip" name="vip" min="0" max="100"
-                                                    placeholder="V.I.P. (M)" />
+                                                <input 
+                                                type="number" 
+                                                id="vip" 
+                                                name="vip" 
+                                                min="0" 
+                                                max="100"
+                                                placeholder="V.I.P. (M)" 
+                                                value = {props.getState('vip', '')}
+                                                onChange={props.handleChange} 
+                                                />
                                             </div>
                                             <div className="col-lg-4 col-lg-4 col-sm-12">
-                                                <input type="number" id="show_baskets" name="show_baskets" min="0" max="100"
-                                                    placeholder="Show Basket (L)" />                                            </div>
+                                                <input 
+                                                type="number" 
+                                                id="show_baskets" 
+                                                name="show_baskets" 
+                                                min="0" 
+                                                max="100"
+                                                placeholder="Show Basket (L)" 
+                                                value = {props.getState('show_baskets', '')}
+                                                onChange={props.handleChange} 
+                                                /> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="comment-box">
                                         <p><i class="far fa-comment-alt"></i> Notes</p>
-                                        <textarea name="full_comments" placeholder="Write here"></textarea>
+                                        <textarea name="full_comments" placeholder="Write here"
+                                        value = {props.getState('full_comments', '')}
+                                        onChange={props.handleChange} ></textarea>
                                     </div>
                                 </div>
                             </div>

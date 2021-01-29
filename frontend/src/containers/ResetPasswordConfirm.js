@@ -35,9 +35,6 @@ const ResetPasswordConfirm = ({match, reset_password_confirmation }) => {
         return <Redirect to = '/'/>
     }
 
-    //is the user autehticaded
-    //redirec then to the home page
-
     return(
 
         <section className="fxt-template-animation fxt-template-layout8 login-bk" data-bg-image="img/figure/bg8-l.jpg">
