@@ -44,9 +44,9 @@ function Step1(props) {
                                         <input 
                                         type="checkbox" 
                                         name="is_rush" 
-                                        value = {props.getState('is_rush', '')}
+                                        value = {props.getState('is_rush', 'rush')} 
                                         onChange={props.handleChange}
-                                        /> 
+                                        /> <label></label>
                                     </div>
                                 </div>
 
