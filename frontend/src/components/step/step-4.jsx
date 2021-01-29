@@ -8,26 +8,28 @@ import React from "react";
 function Step4 (props) {
         
         var typeD = props.state.deliberyType;
-        console.log(`typed ${typeD}`)
-        console.log(props.state.deliberyType);
-        console.log(props.state.pickup_company)
-        console.log( props.state.delivery_first_name)
+
         switch(typeD){
             case 'pickup': 
                 var nombre = props.state.pickup_company;
+                break;
             
             case 'delibery':
                 var nombre = props.state.delivery_first_name;
+                break;
 
             case 'dropof':
                 var nombre = props.state.dropof_first_name;
+                break;
 
             case 'fedex':
                 var nombre = props.state.fedex_first_name;
+                break;
             default:
                 var nombre = 'nose como es'
+                break;
         }
-        console.log(`nombre ${nombre}`);
+        
 
     
         return (
@@ -69,9 +71,8 @@ function Step4 (props) {
                         </div>
                         <div id="project">
                             <h2>Description</h2>
-                            <p>Proin cursus, dui non tincidunt elementum, tortor ex feugiat enim, at elementum enim quam
-                                vel purus.
-                                Curabitur semper malesuada urna ut suscipit.</p>
+                            <p>{props.state.fedes_comments}</p>
+                            
                         </div>
                     </div>
                     {/*End Invoice Mid*/}
@@ -104,7 +105,7 @@ function Step4 (props) {
                                             <p className="itemtext" />
                                         </td>
                                         <td className="tableitem">
-                                            <p className="itemtext">10</p>
+                                            <p className="itemtext">{props.state.give_away}</p>
                                         </td>
                                     </tr>
                                     <tr className="service">
@@ -118,7 +119,7 @@ function Step4 (props) {
                                             <p className="itemtext" />
                                         </td>
                                         <td className="tableitem">
-                                            <p className="itemtext">10</p>
+                                            <p className="itemtext">{props.state.vip}</p>
                                         </td>
                                     </tr>
                                     <tr className="service">
@@ -132,7 +133,7 @@ function Step4 (props) {
                                             <p className="itemtext" />
                                         </td>
                                         <td className="tableitem">
-                                            <p className="itemtext">10</p>
+                                            <p className="itemtext">{props.state.show_baskets}</p>
                                         </td>
                                     </tr>
                                     <tr className="service">
@@ -156,7 +157,7 @@ function Step4 (props) {
                                             <h2>TOTAL</h2>
                                         </td>
                                         <td className="payment">
-                                            <h1 style={{justifyContent: 'left', textAlign: 'left'}}> 30 </h1>
+                                            <h1 style={{justifyContent: 'left', textAlign: 'left'}}>{props.state.show_baskets + props.state.vip + props.state.give_away}</h1>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -181,9 +182,7 @@ function Step4 (props) {
                             </div>
                             <div id="project">
                                 <h2>NOTES</h2>
-                                <p>Proin cursus, dui non tincidunt elementum, tortor ex feugiat enim, at elementum enim
-                                    quam vel purus.
-                                    Curabitur semper malesuada urna ut suscipit.</p>
+                                <p>{props.state.full_comments}</p>
                             </div>
                         </div>     
                     </div>
