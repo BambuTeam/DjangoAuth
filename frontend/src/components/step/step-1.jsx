@@ -95,7 +95,7 @@ function Step1(props) {
                                                         defaultValue="Custom Order"
                                                         value = {props.getState('order_t', 'Custom Order')}
                                                         onChange={props.handleChange} 
-                                                         />
+                                                        />
                                                     </span>
                                                 </span>
                                             </label>
