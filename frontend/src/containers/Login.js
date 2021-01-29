@@ -25,7 +25,7 @@ const Login = ({ login, isAuthenticated }) => {
         login(email, password)
     }
     if (isAuthenticated){
-        return <Redirect to = '/home'/>
+        return <Redirect to = '/step'/>
     }
 
     //is the user autehticaded
@@ -108,7 +108,8 @@ const Login = ({ login, isAuthenticated }) => {
 };
  
 const mapStateToProps = state =>({
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+    error: state.auth.error
 })
 
 export default connect(mapStateToProps, { login })(Login);

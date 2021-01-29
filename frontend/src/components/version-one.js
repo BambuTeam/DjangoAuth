@@ -47,7 +47,7 @@ function VersionOne(isAuthenticated, username, usermail) {
 
                 
                     <Steps >
-                        <Step component={Step1} username = {username}/>
+                        <Step component={Step1} />
                         <Step component={Step2} />
                         <Step component={Step3} />
                         <Step component={Step4} />
