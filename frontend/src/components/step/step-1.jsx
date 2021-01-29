@@ -41,7 +41,12 @@ function Step1(props) {
 
                                 <div className="container-rush">
                                     <div className="rushsvg">
-                                        <input type="checkbox" value="Rush" name="is_rush" /> <label></label>
+                                        <input 
+                                        type="checkbox" 
+                                        name="is_rush" 
+                                        value = {props.getState('is_rush', '')}
+                                        onChange={props.handleChange}
+                                        /> 
                                     </div>
                                 </div>
 
@@ -59,10 +64,13 @@ function Step1(props) {
                                                 <span className="service-check-option">
                                                     <span>
                                                         <input 
-                                                        type="radio" 
-                                                        name="order_type"
-                                                        id = "rd-regular-order"
-                                                        defaultValue="Regular Order" defaultChecked 
+                                                            type="radio" 
+                                                            name="order_type"
+                                                            id = "rd-regular-order"
+                                                            defaultValue="Regular Order" 
+                                                            defaultChecked
+                                                            value = {props.getState('order_t', 'Regular Order')}
+                                                            onChange={props.handleChange} 
                                                         />
                                                     </span>
                                                 </span>
@@ -85,6 +93,8 @@ function Step1(props) {
                                                         id = "rd-custom-order"
                                                         name="order_type"
                                                         defaultValue="Custom Order"
+                                                        value = {props.getState('order_t', 'Custom Order')}
+                                                        onChange={props.handleChange} 
                                                          />
                                                     </span>
                                                 </span>
