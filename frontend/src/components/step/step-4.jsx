@@ -17,7 +17,7 @@ function Step4 (props) {
                     <div id="invoice-top">
                         <div className="supervisor" />
                         <div className="info">
-                            <h2 style={{textTransform: 'uppercase'}}>Isabel Comp</h2>
+                            <h2 style={{textTransform: 'uppercase'}}>{  <h2>Step {props.currentStep}</h2>}</h2>
                             <h6 style={{textDecoration: 'underline'}}> Authorized By </h6>
                             <p />
                         </div>
@@ -169,7 +169,13 @@ function Step4 (props) {
                                     className="fa fa-arrow-right"></i></button></li>
                     </ul>
                 </div>
-                {/*End Invoice*/}
+
+
+                <p>Rush: {props.state.is_rush}</p>
+                <p>orter type {props.state.order_t}</p>
+
+
+                
             </div>
 
         );
