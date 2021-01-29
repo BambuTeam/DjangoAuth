@@ -6,7 +6,7 @@ function Step3(props) {
     step3.classList.add('js-active');
     step3.classList.add('current')
     step2.classList.remove('current')
-    
+    props.state.deliberyType = 'pickup'
     
 
     const handleClicPickUp = ()=>{
@@ -18,6 +18,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'pickup'
     }
     const handleClicDelivery = ()=>{
         var button = document.querySelector('#btn_Delivery')
@@ -28,6 +29,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'delibery'
     }
 
     const handleClicDropOf = ()=>{
@@ -39,6 +41,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'dropof'
     }
     const handleClicFedex = ()=>{
         var button = document.querySelector('#btn_Fedex')
@@ -49,6 +52,7 @@ function Step3(props) {
         var oters_secction = document.querySelectorAll('.sec_pickup');
         oters_secction.forEach((forms)=>{forms.style.display='none'});
         secction.style.display='block';
+        props.state.deliberyType = 'fedex'
     }
 
 

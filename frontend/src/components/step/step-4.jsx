@@ -1,6 +1,34 @@
 import React from "react";
 
+
+
+
+
+
 function Step4 (props) {
+        
+        var typeD = props.state.deliberyType;
+        console.log(`typed ${typeD}`)
+        console.log(props.state.deliberyType);
+        console.log(props.state.pickup_company)
+        console.log( props.state.delivery_first_name)
+        switch(typeD){
+            case 'pickup': 
+                var nombre = props.state.pickup_company;
+            
+            case 'delibery':
+                var nombre = props.state.delivery_first_name;
+
+            case 'dropof':
+                var nombre = props.state.dropof_first_name;
+
+            case 'fedex':
+                var nombre = props.state.fedex_first_name;
+            default:
+                var nombre = 'nose como es'
+        }
+        console.log(`nombre ${nombre}`);
+
     
         return (
             <div id="invoiceholder">
@@ -11,21 +39,21 @@ function Step4 (props) {
                         <h1>Regular/Custom</h1>
                         <div>
                             <img src="http://crossmediaplus.com/s3/logo-goyah.svg" alt="Goya Baskets" />
-                            <div className="rushico" />
+                            { props.state.is_rush == 'true' ? <div className="rushico" />: '' }
                         </div>
                     </div>
                     <div id="invoice-top">
                         <div className="supervisor" />
                         <div className="info">
-                            <h2 style={{textTransform: 'uppercase'}}>{  <h2>Step {props.currentStep}</h2>}</h2>
-                            <h6 style={{textDecoration: 'underline'}}> Authorized By </h6>
+                            <h2 style={{textTransform: 'uppercase'}}>Autorized by</h2>
+                            <h6 style={{textDecoration: 'underline'}}> Goya </h6>
                             <p />
                         </div>
                         {/*End Info*/}
                         <div className="title">
                             <h1 style={{fontWeight: 'bold', textTransform: 'uppercase', textDecoration: 'underline'}}>
                                 Order No. <span className="ordernumber">#1069</span></h1>
-                            <p>Issued: May 27, 2015<br />
+                            <p>Issued: {props.state.order_date}<br />
                                 {/* Payment Due: June 27, 2015 */}
                             </p>
                         </div>
@@ -36,8 +64,8 @@ function Step4 (props) {
                         <div className="clientlogo" />
                         <div className="info">
                             <h2 style={{textTransform: 'uppercase'}}>Client Name</h2>
-                            <h style={{textDecoration: 'underline', fontWeight: 900, color: '#1D285A'}}>Sheila Diaz
-                            </h>
+                            <h2 style={{textDecoration: 'underline', fontWeight: 900, color: '#1D285A'}}>{nombre}
+                            </h2>
                         </div>
                         <div id="project">
                             <h2>Description</h2>
