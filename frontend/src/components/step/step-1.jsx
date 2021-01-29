@@ -3,10 +3,10 @@ import regular from "../../assets/img/regular.svg";
 import custom from "../../assets/img/custom.svg";
 import { connect } from 'react-redux'
 import { Redirect } from "react-router-dom";
+import { StepComponentProps } from "react-step-builder";
 
 
-
-function Step1(props) {
+function Step1(props: StepComponentProps) {
 
     const handleClicDropOf = ()=>{
         var button = document.querySelector('#btn-regular-order');

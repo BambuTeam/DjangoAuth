@@ -1,7 +1,15 @@
 import React from "react";
+import { StepComponentProps } from "react-step-builder";
 
 
-function Step2(props) {
+function Step2(props: StepComponentProps ) {
+
+    var step1 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(1)');
+    var step2 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2)');
+    step2.classList.add('js-active');
+    step1.classList.add('js-active');
+
+
     return (
         <div className="multisteps-form__panel" data-animation="slideHorz">
                 <div className="wizard-forms">
