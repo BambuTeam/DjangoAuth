@@ -56,6 +56,7 @@ function Step2(props: StepComponentProps ) {
                                     placeholder="Description of Order "
                                     value = {props.getState('custom_order_text', '')}
                                     onChange={props.handleChange} 
+                                    required="true"
                                     />
                                     <input 
                                     type="date" 
