@@ -255,7 +255,7 @@ function Step3(props) {
                                         <option value="NE">Nebraska</option>
                                         <option value="NV">Nevada</option>
                                         <option value="NH">New Hampshire</option>
-                                        <option value="NJ" selected >New Jersey</option>
+                                        <option value="NJ"  >New Jersey</option>
                                         <option value="NM">New Mexico</option>
                                         <option value="NY">New York</option>
                                         <option value="NC">North Carolina</option>
@@ -406,7 +406,7 @@ function Step3(props) {
                                         <option value="NE">Nebraska</option>
                                         <option value="NV">Nevada</option>
                                         <option value="NH">New Hampshire</option>
-                                        <option value="NJ" selected>New Jersey</option>
+                                        <option value="NJ">New Jersey</option>
                                         <option value="NM">New Mexico</option>
                                         <option value="NY">New York</option>
                                         <option value="NC">North Carolina</option>
