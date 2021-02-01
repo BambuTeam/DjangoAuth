@@ -54,7 +54,7 @@ function Step2(props: StepComponentProps ) {
                                     name="custom_order_text" 
                                     class="form-control" 
                                     placeholder="Description of Order "
-                                    value = {props.getState('custo_roder_text', '')}
+                                    value = {props.getState('custom_order_text', '')}
                                     onChange={props.handleChange} 
                                     />
                                     <input 
