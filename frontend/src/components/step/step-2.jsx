@@ -14,6 +14,19 @@ function Step2(props: StepComponentProps ) {
     step3.classList.remove('current');
     step3.classList.remove('js-active');
 
+    try {
+        var customfield = document.querySelector('#custom-field')
+    if (props.state.is_custom == 'true'){
+        customfield.style.display = "block";
+    }
+    else{
+        customfield.style.display="none"
+    }
+
+    } catch (error) {   
+        console.error(error)
+    }
+    
 
     return (
         <div className="multisteps-form__panel" data-animation="slideHorz">
@@ -36,11 +49,11 @@ function Step2(props: StepComponentProps ) {
                                 <div className="form-inner-area">
                                     
                                     <input 
+                                    id="custom-field"
                                     type="text" 
                                     name="custom_order_text" 
-                                    class="form-control valid" 
-                                    aria-invalid="false" 
-                                    placeholder="Description of Order"
+                                    class="form-control161656461+6316563639" 
+                                    placeholder="Description of Order "
                                     value = {props.getState('custo_roder_text', '')}
                                     onChange={props.handleChange} 
                                     />
@@ -49,7 +62,7 @@ function Step2(props: StepComponentProps ) {
                                     name="order_date"
                                     value = {props.getState('order_date', '')}
                                     onChange={props.handleChange} 
-                                    />
+                                    required/>
                                     <input 
                                     type="time" 
                                     id="hour" 
