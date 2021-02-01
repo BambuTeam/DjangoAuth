@@ -2,9 +2,9 @@ import React from "react";
 import { StepComponentProps } from "react-step-builder";
 
 
+
 function Step2(props: StepComponentProps ) {
     var step3 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(3)');
-
     var step1 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(1)');
     var step2 = document.querySelector('#root > div > div.wrapper > div.steps-area.steps-area-fixed > div.steps.clearfix > ul > li:nth-child(2)');
     step2.classList.add('js-active');
@@ -27,6 +27,7 @@ function Step2(props: StepComponentProps ) {
         console.error(error)
     }
     
+
 
     return (
         <div className="multisteps-form__panel" data-animation="slideHorz">
@@ -51,19 +52,22 @@ function Step2(props: StepComponentProps ) {
                                     <input 
                                     id="custom-field"
                                     type="text" 
+                                    aria-required="true"
                                     name="custom_order_text" 
                                     class="form-control" 
                                     placeholder="Description of Order "
-                                    value = {props.getState('custom_order_text', '')}
+                                    value = {props.getState('custom_order_text', '') }
                                     onChange={props.handleChange} 
                                     required="true"
                                     />
+
                                     <input 
                                     type="date" 
+                                    aria-required="true"
                                     name="order_date"
                                     value = {props.getState('order_date', '')}
                                     onChange={props.handleChange} 
-                                    required/>
+                                    />
                                     <input 
                                     type="time" 
                                     id="hour" 
