@@ -52,7 +52,7 @@ function Step2(props: StepComponentProps ) {
                                     id="custom-field"
                                     type="text" 
                                     name="custom_order_text" 
-                                    class="form-control161656461+6316563639" 
+                                    class="form-control" 
                                     placeholder="Description of Order "
                                     value = {props.getState('custo_roder_text', '')}
                                     onChange={props.handleChange} 
