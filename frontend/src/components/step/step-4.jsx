@@ -1,7 +1,41 @@
 import React from "react";
 
 
+    const handleFormSubmit = (event, requestType) => {
+        //event.preventDefault; 
 
+        const is_rush = event.target.elements.is_rush.value;
+        const order_type = event.target.elements.order_type.value;
+        const order_date = event.target.elements.order_date.value;
+        const custom_order = event.target.elements.custom_order.value;
+        const give_away = event.target.elements.give_away.vale;
+        const vip = event.target.elements.vip.value;
+        const show_baskets = event.target.elements.show_baskets.value;
+
+
+        console.log(is_rush, order_type, order_date, custom_order, give_away, vip, show_baskets);
+
+
+        /* switch(requestType){
+            case 'post':
+                return axios.post('http://127.0.0.1:8000/api/',{
+                    is_rush: is_rush,
+                    order_type: order_type,
+                    order_date: order_date,
+                    custom_order: custom_order,
+                    give_away: give_away,
+                    vip: vip,
+                    show_baskets
+                
+                })
+                .then(res => console.log(res))
+                .catch(error=>console.log(error));
+
+            break;
+           
+        } */
+
+    } 
 
 
 
