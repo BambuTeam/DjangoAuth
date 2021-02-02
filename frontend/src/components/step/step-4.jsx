@@ -1,11 +1,187 @@
 import React from "react";
+import axios from 'axios';
 
 
+    const handleFormSubmit = (event, requestType) => {
+        //event.preventDefault; 
 
+        const is_rush = event.target.elements.is_rush.value;
+        const order_type = event.target.elements.order_type.value;
+        const order_date = event.target.elements.order_date.value;
+        const custom_order = event.target.elements.custom_order.value;
+        const give_away = event.target.elements.give_away.vale;
+        const vip = event.target.elements.vip.value;
+        const show_baskets = event.target.elements.show_baskets.value;
+
+
+        console.log(is_rush, order_type, order_date, custom_order, give_away, vip, show_baskets);
+
+
+        /* switch(requestType){
+            case 'post':
+                return axios.post('http://127.0.0.1:8000/api/',{
+                    {
+                        is_rush:props.status.is_rush,
+                        is_custom :props.status.is_custom,
+                        custom_order_text : props.status.custom_order_text,
+                        order_date : props.status.order_date,
+                        order_hour : props.status.order_hour,
+                        give_aways : "10",
+                        vip : "12",
+                        show_baskets : "23",
+                        comments : "loremp ipsum algo ",
+                        delibery_type : "seee te cosa",
+                        pick_up_message : "mensajito para test",
+                        pick_up_company : "batres",
+                        pick_up_date : "2020-01-01",
+                        pick_up_hout : "20:30",
+                        delivery_fname : "fname",
+                        delibery_lname :"this is the name",
+                        drop_off_fname : "lastname",
+                        drop_off_lname : "otername",
+                        drop_off_address : "hghgkjh,
+                        drop_off_city : "models.CharField(max_length:100),
+                        drop_off_state : "models.CharField(max_length:100),
+                        drop_off_phone : "models.CharField(max_length:100),
+                        fedex_off_fname : "models.CharField(max_length:100),
+                        fedex_off_lname : "models.CharField(max_length:100),
+                        fedex_off_address : "models.CharField(max_length:100),
+                        fedex_off_city : "models.CharField(max_length:100),
+                        fedex_off_state : "models.CharField(max_length:100),
+                        fedex_off_phone : "models.CharField(max_length:100)
+                    }
+                
+                })
+                .then(res => console.log(res))
+                .catch(error=>console.log(error));
+
+            break; */
+           
+    }
+
+     
 
 
 
 function Step4 (props) {
+
+
+    const handleFormSubmit = (event, requestType) => {
+        //event.preventDefault; 
+
+        const is_rush = props.state.is_rush;
+        const order_type = props.state.is_custom;
+        const custom_order_text = props.state.custom_order_text;
+        const order_date = props.state.order_date;
+        const hour = props.state.hour;
+        const give_away = props.state.give_away;
+        const vip = props.state.vip;
+        const show_baskets = props.state.show_baskets;
+        const full_comments = props.state.full_comments;
+        const delibery_type = props.state.deliberyType;
+        const pickup_message = props.state.pickup_message;
+        const pickup_company = props.state.pickup_company;
+        const pickup_order_date = props.state.pickup_order_date;
+        const pickup_hour = props.state.pickup_hour;
+        const delivery_first_name = props.state.delivery_first_name;
+        const delivery_last_name = props.state.delivery_last_name;
+        const dropof_first_name = props.state.dropof_first_name;
+        const dropof_last_name = props.state.dropof_last_name;
+        const dropof_address = props.state.dropof_address;
+        const dropof_city = props.state.dropof_city;
+        const dropof_state = props.state.dropof_state;
+        const dropof_zip = props.state.dropof_zip;
+        const dropof_phone = props.state.dropof_phone;
+        const fedex_first_name = props.state.fedex_first_name;
+        const fedex_last_name = props.state.fedex_last_name;
+        const fedex_address = props.state.fedex_address;
+        const fedex_city = props.state.fedex_city;
+        const fedex_state = props.state.fedex_state;
+        const fedex_zip = props.state.fedex_zip;
+        const fedex_phone = props.state.fedex_phone;
+
+
+
+
+
+
+        console.log(is_rush,
+            order_type,
+            custom_order_text,
+            order_date,
+            hour,
+            give_away,
+            vip,
+            show_baskets,
+            full_comments,
+            delibery_type,
+            pickup_message,
+            pickup_company,
+            pickup_order_date,
+            pickup_hour,
+            delivery_first_name,
+            delivery_last_name,
+            dropof_first_name,
+            dropof_last_name,
+            dropof_address,
+            dropof_city,
+            dropof_state,
+            dropof_zip,
+            dropof_phone,
+            fedex_first_name,
+            fedex_last_name,
+            fedex_address,
+            fedex_city,
+            fedex_state,
+            fedex_zip,
+            fedex_phone);
+
+
+        /* switch(requestType){
+            case 'post':
+                return axios.post('http://127.0.0.1:8000/api/',{
+                    {
+                        is_rush:props.status.is_rush,
+                        is_custom :props.status.is_custom,
+                        custom_order_text : props.status.custom_order_text,
+                        order_date : props.status.order_date,
+                        order_hour : props.status.order_hour,
+                        give_aways : "10",
+                        vip : "12",
+                        show_baskets : "23",
+                        comments : "loremp ipsum algo ",
+                        delibery_type : "seee te cosa",
+                        pick_up_message : "mensajito para test",
+                        pick_up_company : "batres",
+                        pick_up_date : "2020-01-01",
+                        pick_up_hout : "20:30",
+                        delivery_fname : "fname",
+                        delibery_lname :"this is the name",
+                        drop_off_fname : "lastname",
+                        drop_off_lname : "otername",
+                        drop_off_address : "hghgkjh,
+                        drop_off_city : "models.CharField(max_length:100),
+                        drop_off_state : "models.CharField(max_length:100),
+                        drop_off_phone : "models.CharField(max_length:100),
+                        fedex_off_fname : "models.CharField(max_length:100),
+                        fedex_off_lname : "models.CharField(max_length:100),
+                        fedex_off_address : "models.CharField(max_length:100),
+                        fedex_off_city : "models.CharField(max_length:100),
+                        fedex_off_state : "models.CharField(max_length:100),
+                        fedex_off_phone : "models.CharField(max_length:100)
+                    }
+                
+                })
+                .then(res => console.log(res))
+                .catch(error=>console.log(error));
+
+            break; */
+           
+    }
+
+
+
+
         
         var typeD = props.state.deliberyType;
 

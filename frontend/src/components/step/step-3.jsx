@@ -299,7 +299,7 @@ function Step3(props) {
                                         aria-invalid="false" 
                                         placeholder="Format: 123-45-678" 
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                                        value = {props.getState('dropof_zip', '')}
+                                        value = {props.getState('dropof_phone', '')}
                                         onChange={props.handleChange} 
                                         />
                                     </div>

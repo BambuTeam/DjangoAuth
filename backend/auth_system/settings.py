@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'djoser',
     'accounts',
     'corsheaders',
+    'baskets'
 ]
 
 MIDDLEWARE = [
