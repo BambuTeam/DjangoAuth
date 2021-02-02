@@ -3,8 +3,8 @@ from rest_framework import viewsets, permissions
 from baskets.serializers import OrderBasketreateSerializer
 
 
-class OerderBasketViewSet(view):
-    queryset = OrderBasket.OrderBasket
+class OerderBasketViewSet(viewsets.ModelViewSet):
+    queryset = OrderBasket.objects.all()
     permission_classes = [
         permissions.AllowAny
     ]
