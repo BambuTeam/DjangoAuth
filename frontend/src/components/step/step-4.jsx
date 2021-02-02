@@ -333,7 +333,7 @@ function Step4 (props) {
                                             <h2>TOTAL</h2>
                                         </td>
                                         <td className="payment">
-                                            <h1 style={{justifyContent: 'left', textAlign: 'left'}}>{props.state.show_baskets + props.state.vip + props.state.give_away}</h1>
+                                            <h1 style={{justifyContent: 'left', textAlign: 'left'}}>{ parseInt(props.state.show_baskets) + parseInt(props.state.vip) + parseInt(props.state.give_away)}</h1>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -353,8 +353,8 @@ function Step4 (props) {
                             <div className="reception" />
                             <div className="info">
                                 <h2 style={{textTransform: 'uppercase'}}> GOYA RECEPTION</h2>
-                                <h style={{fontWeight: 900, color: '#1D285A', fontSize: '20px'}}>Sheila Diaz
-                                </h>
+                                <h1 style={{fontWeight: 900, color: '#1D285A', fontSize: '20px'}}>Sheila Diaz
+                                </h1>
                             </div>
                             <div id="project">
                                 <h2>NOTES</h2>
@@ -368,15 +368,13 @@ function Step4 (props) {
                     <ul>
                         <li><button className="js-btn-prev" title="BACK" onClick={props.prev}>BACK <i
                                     className="fa fa-arrow-left"></i></button></li>
-                        <li><button className="js-btn-next" title="NEXT" onClick={props.next}>SUBMIT <i
+                        <li><button className="js-btn-next" title="NEXT" onClick={handleFormSubmit}>SUBMIT <i
                                     className="fa fa-arrow-right"></i></button></li>
                     </ul>
                 </div>
 
 
-                <p>Rush: {props.state.is_rush}</p>
-                <p>orter type {props.state.is_custom}</p>
-
+        
 
                 
             </div>

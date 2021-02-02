@@ -71,7 +71,7 @@ class StepFive extends React.Component {
                             <div className="actions">
                                 <ul>
                                     <li><span className="js-btn-prev" title="BACK"><i className="fa fa-arrow-left"></i> BACK </span></li>
-                                    <li><button type="submit" title="NEXT">SUBMIT <i className="fa fa-arrow-right"></i></button></li>
+                                    <li><button type="submit" title="Send">SUBMIT <i className="fa fa-arrow-right"></i></button></li>
                                 </ul>
                             </div>
                         </div>
